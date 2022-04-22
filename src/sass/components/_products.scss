@@ -53,7 +53,6 @@
   }
 
   &__title {
-    position: relative;
     margin-bottom: 30px;
 
     font-weight: 400;
@@ -63,41 +62,41 @@
     text-transform: uppercase;
 
     color: $main-text;
+  }
+
+  &__span {
+    position: relative;
+    content: '';
+    display: inline-block;
+    margin-bottom: 30px;
+
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+
+    background-color: $main-bgc;
 
     &::after {
       position: absolute;
       content: '';
-      top: 53px;
+      transform: translateX(-12px);
 
       width: 6px;
       height: 6px;
       border-radius: 50%;
 
-      color: $main-text;
       background-color: $main-bgc;
     }
-    &::after {
+
+    &::before {
       position: absolute;
       content: '';
-      top: 53px;
+      transform: translateX(6px);
 
       width: 6px;
       height: 6px;
       border-radius: 50%;
 
-      color: $main-text;
-      background-color: $main-bgc;
-    }
-    &::after {
-      position: absolute;
-      content: '';
-      top: 53px;
-
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-
-      color: $main-text;
       background-color: $main-bgc;
     }
   }
