@@ -53,6 +53,7 @@
   }
 
   &__title {
+    position: relative;
     margin-bottom: 30px;
 
     font-weight: 400;
@@ -62,6 +63,17 @@
     text-transform: uppercase;
 
     color: $main-text;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+
+      color: $main-text;
+      background-color: $main-bgc;
+    }
   }
 
   &__text {
