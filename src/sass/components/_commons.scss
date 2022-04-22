@@ -1,5 +1,35 @@
 .container {
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+
+@media screen and (min-width:480px) {
+      width: 480px;
+    }
+    @media screen and (min-width:768px) {
+      width: 768px;
+    }
+    @media screen and (min-width:1280px) {
+      width: 1280px;
+    }
 }
 
 .btn {
+display: block;
+font-weight: 700;
+font-size: 16px;
+line-height: calc(20.8/16);
+text-align: center;
+border-radius: 22px;
+border: none; 
+cursor: pointer;
+}
+
+.btn__hero{
+    @extend .btn;
+font-weight: 400;
+font-size: 14px;
+line-height: calc(18/14);
+text-align: center;
+border-radius: 20px;
 }
