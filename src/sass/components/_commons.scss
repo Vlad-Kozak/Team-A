@@ -37,12 +37,14 @@ border-radius: 20px;
 
 .btn__regular{
   @extend .btn;
+  /*----or @extend .btn__hero;----*/
   color: #D41342;
   background-color: #ffffff
 }
 
 .btn__alternative{
   @extend .btn;
+  /*----or @extend .btn__hero;----*/
   color: #ffffff;
   background-color: #D41342
 }
