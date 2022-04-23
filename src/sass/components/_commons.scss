@@ -34,6 +34,22 @@ text-align: center;
 border-radius: 20px;
 }
 
+
+.btn__regular{
+  @extend .btn;
+  color: #D41342;
+  background-color: #ffffff
+}
+
+.btn__alternative{
+  @extend .btn;
+  color: #ffffff;
+  background-color: #D41342
+}
+
+
+
+
 /*-----fonts----- */
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
