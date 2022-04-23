@@ -8,13 +8,13 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 
-  @media screen and (max-width: 767px) {
+  @include mobile {
     max-width: 480px;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     max-width: 740px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     max-width: 1090px;
   }
 }
