@@ -113,11 +113,10 @@
     width: 34px;
     height: 34px;
   }
-
-  &:hover,
-  &:focus {
-    fill: $red-text;
-  }
+  
+}
+.social__link .social__icon:focus{  //???????????????????
+  fill:currentColor;
 }
 
 .address-footer {
@@ -139,10 +138,14 @@
 
 .addres__link {
   color: $red-text;
+  margin-left: 4px;
+  @include tablet{
+    margin-left:3px;
+  }
 }
 
 .copyright {
-  max-width: 150px;
+  max-width: 140px;
   margin: 0 auto;
 
   font-weight: 700;
