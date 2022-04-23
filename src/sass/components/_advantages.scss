@@ -1,0 +1,37 @@
+
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+
+.advantages__number{
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1,4;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+color: var($red-text);
+} 
+
+.number1::before{
+    content: url(../../images/icon.png);
+}
+.advantages__text {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.7%;
+color: var($second-text);
+}
