@@ -25,7 +25,7 @@ border: none;
 cursor: pointer;
 }
 
-.btn__hero{
+.hero__btn{
     @extend .btn;
 font-weight: 400;
 font-size: 14px;
@@ -37,16 +37,22 @@ border-radius: 20px;
 
 .btn__regular{
   @extend .btn;
-  /*----or @extend .btn__hero;----*/
+  /*----or @extend .hero__btn;----*/
   color: #D41342;
-  background-color: #ffffff
+  background-color: #ffffff;
+  &:hover, &:focus{
+    background-color: #ECEBEB;
+  }
 }
 
-.btn__alternative{
+.btn__alt{
   @extend .btn;
   /*----or @extend .btn__hero;----*/
   color: #ffffff;
-  background-color: #D41342
+  background-color: #D41342;
+   &:hover, &:focus{
+    background-color: #C7133E;
+  }
 }
 
 
