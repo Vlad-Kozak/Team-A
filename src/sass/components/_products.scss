@@ -95,10 +95,6 @@
       width: 280px;
     }
 
-    @include mobile {
-      height: 485px;
-    }
-
     @include tablet {
       width: calc(100% / 3 - 20px);
       margin-left: 20px;
@@ -107,7 +103,6 @@
     @include desktop {
       width: calc(100% / 3 - 23px);
       margin-left: 23px;
-      height: 525px;
     }
 
     &:nth-child(1) {
@@ -127,15 +122,35 @@
         background-size: cover;
         background-image: url(../images/home-pic1-mob.png);
 
+        @media screen and (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          background-image: url(../images/home-pic1-mob-2x.png);
+        }
+
         @include tablet {
           width: 220px;
           height: 224px;
+
+          background-image: url(../images/home-pic1-tablet.png);
+          @media screen and (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../images/home-pic1-tablet-2x.png);
+          }
         }
 
         @include desktop {
           width: 335px;
           height: 335px;
           top: -10%;
+
+          background-image: url(../images/home-pic1.png);
+          @media screen and (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../images/home-pic1-2x.png);
+          }
         }
       }
     }
@@ -156,15 +171,35 @@
         background-size: cover;
         background-image: url(../images/home-pic2-mob.png);
 
+        @media screen and (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          background-image: url(../images/home-pic2-mob-2x.png);
+        }
+
         @include tablet {
           width: 220px;
           height: 224px;
+
+          background-image: url(../images/home-pic2-tablet.png);
+          @media screen and (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../images/home-pic2-tablet-2x.png);
+          }
         }
 
         @include desktop {
           width: 335px;
           height: 335px;
           top: -10%;
+
+          background-image: url(../images/home-pic2.png);
+          @media screen and (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../images/home-pic2-2x.png);
+          }
         }
       }
     }
@@ -185,15 +220,35 @@
         background-size: cover;
         background-image: url(../images/home-pic3-mob.png);
 
+        @media screen and (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          background-image: url(../images/home-pic3-mob-2x.png);
+        }
+
         @include tablet {
           width: 220px;
           height: 224px;
+
+          background-image: url(../images/home-pic3-tablet.png);
+          @media screen and (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../images/home-pic3-tablet-2x.png);
+          }
         }
 
         @include desktop {
           width: 335px;
           height: 335px;
           top: -10%;
+
+          background-image: url(../images/home-pic3.png);
+          @media screen and (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../images/home-pic3-2x.png);
+          }
         }
       }
     }
