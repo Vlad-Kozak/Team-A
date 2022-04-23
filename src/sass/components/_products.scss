@@ -82,6 +82,8 @@
 
   &__item {
     border-radius: 24px;
+    transform: scale(1);
+    transition: transform 300ms linear, box-shadow 300ms linear;
 
     @media screen and (max-width: 479px) {
       width: 100%;
@@ -98,63 +100,24 @@
 
     &:nth-child(1) {
       background-color: $hero-light-bgc;
-
-      &::after {
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-
-        width: 249px;
-        height: 252px;
-
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        background-image: url();
-      }
     }
     &:nth-child(2) {
       background-color: $coffee-bgc;
-
-      &::after {
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-
-        width: 249px;
-        height: 252px;
-
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        background-image: url();
-      }
     }
     &:nth-child(3) {
       background-color: $green-bgc;
-
-      &::after {
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-
-        width: 249px;
-        height: 252px;
-
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        background-image: url();
-      }
     }
 
     &:not(:last-child) {
       @media screen and (max-width: 767px) {
         margin-bottom: 130px;
       }
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      transform: scale(1.1);
     }
   }
 
@@ -181,7 +144,6 @@
     content: '';
     display: inline-block;
     margin-bottom: 30px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     width: 6px;
     height: 6px;
@@ -193,7 +155,6 @@
       position: absolute;
       content: '';
       transform: translateX(-12px);
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
       width: 6px;
       height: 6px;
@@ -206,7 +167,6 @@
       position: absolute;
       content: '';
       transform: translateX(6px);
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
       width: 6px;
       height: 6px;
@@ -239,6 +199,7 @@
   }
 
   &__btn {
+    position: relative;
     margin-bottom: 41px;
     cursor: pointer;
     width: 40px;
@@ -248,7 +209,7 @@
 
     transform: scale(1);
     transition: transform 300ms linear, background-color 300ms linear, fill 300ms linear,
-      box-shadow 300ms linear;
+      box-shadow 300ms linear, opacity 300ms linear;
 
     background-color: $main-bgc;
 
