@@ -181,6 +181,7 @@
     content: '';
     display: inline-block;
     margin-bottom: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     width: 6px;
     height: 6px;
@@ -192,6 +193,7 @@
       position: absolute;
       content: '';
       transform: translateX(-12px);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
       width: 6px;
       height: 6px;
@@ -204,6 +206,7 @@
       position: absolute;
       content: '';
       transform: translateX(6px);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
       width: 6px;
       height: 6px;
