@@ -35,7 +35,7 @@
   align-items: center;
 
   &__item {
-    max-width: 280px;
+    min-width: 280px;
     border-radius: 24px;
 
     &:nth-child(1) {
@@ -65,7 +65,7 @@
     color: $main-text;
   }
 
-  &__span {
+  &__three-dots {
     position: relative;
     content: '';
     display: inline-block;
@@ -103,7 +103,7 @@
   }
 
   &__text {
-    max-width: 200px;
+    min-width: 200px;
     margin-bottom: 30px;
 
     font-weight: 700;
@@ -124,22 +124,5 @@
     border-radius: 50%;
 
     background-color: $main-bgc;
-
-    &::before {
-      content: '-';
-      width: 5px;
-      height: 5px;
-
-      color: $red-text;
-    }
-
-    &::after {
-      content: '>';
-      width: 5px;
-      height: 5px;
-      transform: rotate(1deg);
-
-      color: $red-text;
-    }
   }
 }
