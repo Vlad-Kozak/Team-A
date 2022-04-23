@@ -123,6 +123,13 @@
     height: 40px;
     border-radius: 50%;
 
-    background-color: transparent;
+    background-color: $main-bgc;
+  }
+
+  &__svg {
+    width: 10px;
+    height: 10px;
+
+    fill: $red-text;
   }
 }
