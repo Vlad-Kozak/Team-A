@@ -3,15 +3,15 @@
 .products {
   text-align: center;
 
-  @media screen and (max-width: 767px) {
+  @include mobile {
     padding-top: 121px;
     padding-bottom: 99px;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     padding-top: 122px;
     padding-bottom: 112px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     padding-top: 127px;
     padding-bottom: 119px;
   }
@@ -28,18 +28,18 @@
 
     color: $pink-text;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       font-size: 26px;
       line-height: 1.15;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       font-size: 30px;
       line-height: 1.13;
     }
   }
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 144px;
 
     font-family: 'Titan One';
     font-weight: 400;
@@ -50,14 +50,16 @@
 
     color: $red-text;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       font-size: 48px;
+      margin-bottom: 150px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       font-size: 58px;
       line-height: 1.13;
       letter-spacing: 0.06em;
+      margin-bottom: 259px;
     }
   }
 }
@@ -65,18 +67,18 @@
 // PRODUCT_LIST
 
 .products-list {
-  @media screen and (max-width: 767px) {
+  @include mobile {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: flex;
     margin-left: -20px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin-left: -23px;
   }
 
@@ -88,28 +90,116 @@
     @media screen and (max-width: 479px) {
       width: 100%;
     }
-    @media screen and (min-width: 768px) {
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      width: 280px;
+    }
+
+    @include mobile {
+      height: 485px;
+    }
+
+    @include tablet {
       width: calc(100% / 3 - 20px);
       margin-left: 20px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       width: calc(100% / 3 - 23px);
       margin-left: 23px;
+      height: 525px;
     }
 
     &:nth-child(1) {
       background-color: $hero-light-bgc;
+
+      &::after {
+        position: absolute;
+        content: '';
+        top: 3%;
+        left: 50%;
+        width: 249px;
+        height: 252px;
+        transform: translate(-50%, -50%);
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../images/home-pic1-mob.png);
+
+        @include tablet {
+          width: 220px;
+          height: 224px;
+        }
+
+        @include desktop {
+          width: 335px;
+          height: 335px;
+          top: -10%;
+        }
+      }
     }
     &:nth-child(2) {
       background-color: $coffee-bgc;
+
+      &::after {
+        position: absolute;
+        content: '';
+        top: 3%;
+        left: 50%;
+        width: 249px;
+        height: 252px;
+        transform: translate(-50%, -50%);
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../images/home-pic2-mob.png);
+
+        @include tablet {
+          width: 220px;
+          height: 224px;
+        }
+
+        @include desktop {
+          width: 335px;
+          height: 335px;
+          top: -10%;
+        }
+      }
     }
     &:nth-child(3) {
       background-color: $green-bgc;
+
+      &::after {
+        position: absolute;
+        content: '';
+        top: 3%;
+        left: 50%;
+        width: 249px;
+        height: 252px;
+        transform: translate(-50%, -50%);
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../images/home-pic3-mob.png);
+
+        @include tablet {
+          width: 220px;
+          height: 224px;
+        }
+
+        @include desktop {
+          width: 335px;
+          height: 335px;
+          top: -10%;
+        }
+      }
     }
 
     &:not(:last-child) {
-      @media screen and (max-width: 767px) {
+      @include mobile {
         margin-bottom: 130px;
       }
     }
@@ -122,6 +212,7 @@
   }
 
   &__title {
+    margin-top: 161px;
     margin-bottom: 30px;
 
     font-family: 'Titan One';
@@ -133,7 +224,7 @@
 
     color: $main-text;
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       font-size: 30px;
       line-height: 1.13;
     }
@@ -177,7 +268,9 @@
   }
 
   &__text {
-    min-width: 200px;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
 
     font-weight: 700;
@@ -188,13 +281,17 @@
 
     color: $main-text;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       line-height: 1.76;
+      max-width: 198;
+      margin-bottom: 40px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       font-size: 16px;
       line-height: 1.76;
+      max-width: 241px;
+      margin-bottom: 62px;
     }
   }
 
@@ -212,6 +309,14 @@
       box-shadow 300ms linear, opacity 300ms linear;
 
     background-color: $main-bgc;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include desktop {
+      margin-bottom: 50px;
+    }
 
     &:hover,
     &:focus {
