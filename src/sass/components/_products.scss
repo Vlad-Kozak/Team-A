@@ -3,9 +3,23 @@
 .products {
   text-align: center;
 
+  @media screen and (max-width: 767px) {
+    padding-top: 121px;
+    padding-bottom: 99px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 122px;
+    padding-bottom: 112px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
+
   &__text {
     margin-bottom: 15px;
 
+    font-family: 'Titan One';
     font-weight: 400;
     font-size: 18px;
     line-height: 1.16;
@@ -13,56 +27,153 @@
     text-transform: uppercase;
 
     color: $pink-text;
+
+    @media screen and (min-width: 768px) {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 30px;
+      line-height: 1.13;
+    }
   }
   &__title {
     margin-bottom: 30px;
 
+    font-family: 'Titan One';
     font-weight: 400;
     font-size: 34px;
     line-height: 1.14;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
 
     color: $red-text;
+
+    @media screen and (min-width: 768px) {
+      font-size: 48px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 58px;
+      line-height: 1.13;
+      letter-spacing: 0.06em;
+    }
   }
 }
 
 // PRODUCT_LIST
 
 .products-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: -20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: -23px;
+  }
 
   &__item {
-    min-width: 280px;
     border-radius: 24px;
+
+    @media screen and (max-width: 479px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 768px) {
+      width: calc(100% / 3 - 20px);
+      margin-left: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc(100% / 3 - 23px);
+      margin-left: 23px;
+    }
 
     &:nth-child(1) {
       background-color: $hero-light-bgc;
+
+      &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+
+        width: 249px;
+        height: 252px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url();
+      }
     }
     &:nth-child(2) {
       background-color: $coffee-bgc;
+
+      &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+
+        width: 249px;
+        height: 252px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url();
+      }
     }
     &:nth-child(3) {
       background-color: $green-bgc;
+
+      &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+
+        width: 249px;
+        height: 252px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url();
+      }
     }
 
     &:not(:last-child) {
-      margin-bottom: 130px;
+      @media screen and (max-width: 767px) {
+        margin-bottom: 130px;
+      }
     }
   }
 
   &__title {
     margin-bottom: 30px;
 
+    font-family: 'Titan One';
     font-weight: 400;
-    font-size: 30px;
-    line-height: 1.13;
+    font-size: 20px;
+    line-height: 1.15;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
     color: $main-text;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 30px;
+      line-height: 1.13;
+    }
   }
 
   &__three-dots {
@@ -107,12 +218,21 @@
     margin-bottom: 30px;
 
     font-weight: 700;
-    font-size: 16px;
-    line-height: 1.76;
+    font-size: 14px;
+    line-height: 1.52;
     letter-spacing: 0.04em;
     text-align: center;
 
     color: $main-text;
+
+    @media screen and (min-width: 768px) {
+      line-height: 1.76;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+      line-height: 1.76;
+    }
   }
 
   &__btn {
