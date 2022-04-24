@@ -11,7 +11,7 @@
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     margin: -1px;
-  }
+}
 
 .advantages__number{
     font-family: 'Titan One';
@@ -21,11 +21,11 @@
     line-height: 1,4;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-color: var($red-text);
+    color: $red-text;
 } 
 
 .number1::before{
-    content: url(../../images/icon.png);
+    content: url(./../images/icon.png);
 }
 .advantages__text {
     font-family: 'DM Sans';
@@ -33,5 +33,5 @@ color: var($red-text);
     font-weight: 700;
     font-size: 12px;
     line-height: 1.7%;
-color: var($second-text);
+    color: $second-text;
 }
