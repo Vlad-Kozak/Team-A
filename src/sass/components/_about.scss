@@ -48,23 +48,15 @@ letter-spacing: 0.04em;
 color: #D41443;
 max-width: 200px;
 margin: 0 auto;
-// padding-left: 29px;
-// padding-right: 41px;
-// margin-bottom: 26px;
+
 
 @include tablet{
     max-width: 100%;
-    // margin-bottom: 50px;
-  }
-  @include desktop{
-    //   margin-bottom: 55px;
   }
 }
 .about__block{
    width: 100%;
     
-   
-
 @include tablet{
   
     display: flex;
@@ -81,57 +73,50 @@ margin: 0 auto;
    }
 }
 
+
 .about__text-block {
    display: flex;
 flex-direction: column;
 align-items: center;
-
-
 padding-left: 30px;
 padding-right: 30px;
 margin-top: 46px;
 
 
    @include tablet{
-       
     padding-left: 17px;
     padding-right: 16px;
     margin-top: 100px;
-
   }
+
   @include desktop{
     padding-left: 74px;
     padding-right: 97px;
     margin-top: 106px;
-
   }
 
 }
 
 .about__image {
-    width: 280px;
-    height: 279px;
-    background-color: olive;
+width: 280px;
+height: 279px;
+background-color: olive;
 margin-left: auto;
 margin-right: auto;
 margin-top: 26px;
 
     @include tablet{
-        width: 340px;
-        height: 339px;
-        margin-left: 0;
-        margin-right: 0;
+    width: 340px;
+    height: 339px;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 50px;
-    
   }
   @include desktop{
-      width: 516px;
-      height: 516px;
+    width: 516px;
+    height: 516px;
     margin-top: 55px;
-   
   }
-
-
 }
 
 .about__main-text { 
@@ -139,26 +124,22 @@ font-weight: 500;
 font-size: 12px;
 line-height: 1.62;
 color: #000000;
-
-
-
-
-
 margin-bottom: 47px;
+
 @include mobile{
     width: 220px;
     margin-left: auto;
-margin-right: auto;
+    margin-right: auto;
 }
 @include tablet{
     font-size: 14px;
     line-height: 1.76;
     width: 340px;
     height: 79px;
-   margin-right: auto;
+    margin-right: auto;
   }
   @include desktop{
-      font-size: 16px;
+    font-size: 16px;
     width: 463px;
     height: 79px;
   }
@@ -171,14 +152,10 @@ font-size: 12px;
 line-height: 1.62; 
 color: #907E82; 
 
-
-
-
-
 @include mobile{
     width: 220px;
     margin-left: auto;
-margin-right: auto;
+    margin-right: auto;
 }
 
 @include tablet{
@@ -186,20 +163,20 @@ margin-right: auto;
     line-height: 1.76;
     width: 340px;
     height: 155px;
-    
   }
+
   @include desktop{
     width: 463px;
     line-height: 1.94;
-   
   }
 }
-.about__texts{
-    @extend .about__text;
-margin: 0 auto;
 
-height: auto;
-word-wrap: break-word;
+.about__texts{
+
+   @extend .about__text;
+    margin: 0 auto;
+    height: auto;
+    word-wrap: break-word;
 }
 
 .about__btn {
@@ -212,13 +189,12 @@ padding-right: 37px;
 width: 176px;
 height: 44px;
 
-
 @include tablet{
     margin-top: 62px;
-   margin-right: auto;
+    margin-right: auto;
   }
   @include desktop{
-      margin-top: 45px;
+    margin-top: 45px;
   }
 
 &:hover,
