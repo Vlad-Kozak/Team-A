@@ -207,14 +207,9 @@
   }
 }
 
-.btn--location,  
-.btn--franchise {
+.btn--dark {
   width: 162px;
   height: 44px;
-  &:hover {
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0,0.25));
-  }
   @include tablet {
     display: inline-block;
     width: 192px;
@@ -225,19 +220,35 @@
   }
 }
 
-.btn--franchise {
+.btn--light {
+  width: 162px;
+  height: 44px;
   margin-top: 10px;
   @include tablet {
     width: 170px;
+    margin-top: 0px;
   }
   @include desktop {
     width: 180px;
   }
 }
 
-.icon-btn--white {
-  width: 16px;
-  height: 16px;
-  fill: green;
-  
+.btn__name--dark {
+  margin-right: 11px;
+  @include tablet {
+    margin-right: 13px;
+  }
+  @include desktop {
+    margin-right: 14px;
+  }
+}
+
+.btn__name--light {
+  margin-right: 15px;
+  @include tablet {
+    margin-right: 15px;
+  }
+  @include desktop {
+    margin-right: 17px;
+  }
 }
