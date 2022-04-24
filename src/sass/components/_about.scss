@@ -1,9 +1,9 @@
-.about {
-}
-.container {
-}
-.about__title-block {
-}
+// .about {
+// }
+// .container {
+// }
+// .about__title-block {
+// }
 .about__pre-title {
 font-family: 'Titan One', sans-serif; 
 font-size:18px;
@@ -12,6 +12,8 @@ text-align: center;
 text-transform: uppercase;
 color: #FFA5BA;
 }
+
+/*--bez padding-bottom---*/
 
 .about__title {
 font-family: 'Titan One', sans-serif; 
@@ -23,12 +25,12 @@ letter-spacing: 0.04em;
 color: #D41443;
 }
 
-.about__main-block {
+// .about__main-block {
 
-}
+// }
 
-.about__image {
-}
+// .about__image {
+// }
 .about__main-text {
 font-weight: 500;
 font-size: 12px;
@@ -46,14 +48,14 @@ color: #907E82;
 width: 176px;
 height: 44px;
 }
-.ingredients__list {
-// display: flex;
-// flex-direction: column;
-}
-.ingredients__item {
-}
-.ingredients__item-image {
-}
+// .ingredients__list {
+// // display: flex;
+// // flex-direction: column;
+// }
+// .ingredients__item {
+// }
+// .ingredients__item-image {
+// }
 
 .ingredients__item-count {
 font-family: 'Titan One', sans-serif;
