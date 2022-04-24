@@ -1,6 +1,16 @@
 .customer-reviews {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 80px;
+  padding-bottom: 86px;
+
+  @include tablet {
+    padding-top: 121px;
+    padding-bottom: 119px;
+  }
+
+  @include desktop {
+    padding-top: 123px;
+    padding-bottom: 132px;
+  }
 }
 
 .comment__img {
@@ -133,4 +143,9 @@
   background-color: transparent;
   background-image: url(./../images/house.svg);
   border-radius: 0%;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 9px);
 }
