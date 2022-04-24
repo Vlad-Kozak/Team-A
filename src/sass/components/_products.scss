@@ -75,11 +75,6 @@
 
   @include tablet {
     display: flex;
-    margin-left: -20px;
-  }
-
-  @include desktop {
-    margin-left: -23px;
   }
 
   &__item {
@@ -96,13 +91,11 @@
     }
 
     @include tablet {
-      width: calc(100% / 3 - 20px);
-      margin-left: 20px;
+      width: calc((100% - 20px - 20px) / 3);
     }
 
     @include desktop {
-      width: calc(100% / 3 - 23px);
-      margin-left: 23px;
+      width: calc((100% - 23px - 23px) / 3);
     }
 
     &:nth-child(1) {
@@ -256,6 +249,14 @@
     &:not(:last-child) {
       @include mobile {
         margin-bottom: 130px;
+      }
+
+      @include tablet {
+        margin-right: 20px;
+      }
+
+      @include desktop {
+        margin-right: 23px;
       }
     }
 
