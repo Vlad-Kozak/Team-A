@@ -108,6 +108,7 @@
   width: 32px;
   height: 32px;
   fill: $hero-dark-bgc;
+  
 
   @include tablet {
     width: 34px;
@@ -115,8 +116,12 @@
   }
   
 }
-.social__link .social__icon:focus{  //???????????????????
-  fill:currentColor;
+.social__link:focus .social__icon,
+.social__link:hover .social__icon {  
+  fill:#d41443;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 50%;
 }
 
 .address-footer {
@@ -139,6 +144,12 @@
 .addres__link {
   color: $red-text;
   margin-left: 4px;
+  &:hover,
+  &:focus{
+    text-decoration: underline;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
   @include tablet{
     margin-left:3px;
   }
