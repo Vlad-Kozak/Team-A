@@ -12,6 +12,10 @@
     clip-path: inset(50%);
     margin: -1px;
 }
+.advantages__number::before{
+    background-image: url(./images/icon.png);
+    background-image: url(./images/icon2.png);
+    background-image: url(./images/icon3.png);}
 
 .advantages__number{
     font-family: 'Titan One';
@@ -22,10 +26,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $red-text;
-} 
 
-.number1::before{
-    content: url(./../images/icon.png);
 }
 .advantages__text {
     font-family: 'DM Sans';
