@@ -1,4 +1,6 @@
-
+// *{
+//   outline:solid 1px darkcyan;
+// }
 
 .about {
  
@@ -116,8 +118,8 @@ font-size: 12px;
 line-height: 1.62; 
 color: #907E82; 
 width: 220px;
-
 margin-bottom: 39px;  
+background-image: url();
 
 @include tablet{
     margin-bottom: 62px;
