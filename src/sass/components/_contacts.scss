@@ -14,12 +14,31 @@
 .locations {
   padding-top: 0px;
   margin-top: 0;
-  padding-bottom: 60px;
+  padding-bottom: 0px;
   background-image: linear-gradient(
   to bottom, 
-  $main-bgc 50%,
-  #FFF5F6 50%,    
+  $main-bgc 5%,
+  #FFF5F6 5%,
+  #FFF5F6 90%,    
   );
+  padding-bottom: 113px;
+  @include tablet {
+    padding-bottom: 165px;
+    background-image: linear-gradient(
+    to bottom, 
+    $main-bgc 10%,
+    #FFF5F6 10%,
+    #FFF5F6 90%,    
+    );
+  }
+  @include desktop {
+    background-image: linear-gradient(
+    to bottom, 
+    $main-bgc 12%,
+    #FFF5F6 12%,
+    #FFF5F6 88%,    
+    );
+  }
 }
 
 .locations--list {
@@ -186,11 +205,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 113px;
   @include tablet {
     flex-direction: row;
     justify-content: center;
-    padding-bottom: 165px;
   }
 }
 
