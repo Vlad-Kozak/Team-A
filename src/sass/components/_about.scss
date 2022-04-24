@@ -1,5 +1,14 @@
-// .about {
-// }
+.about {
+  padding-top: 125px;  
+  padding-bottom: 0;
+
+  @include tablet{
+    padding-top: 130px;
+  }
+  @include desktop{
+      padding-top: 125px;
+  }
+}
 // .container {
 // }
 // .about__title-block {
@@ -11,9 +20,17 @@ line-height: calc(21/16);
 text-align: center;
 text-transform: uppercase;
 color: #FFA5BA;
+
+margin-bottom: 15px;
+
+@include tablet{
+    margin-bottom: 16px;
+  }
+  @include desktop{
+      margin-bottom: 15px;
+  }
 }
 
-/*--bez padding-bottom---*/
 
 .about__title {
 font-family: 'Titan One', sans-serif; 
@@ -23,6 +40,14 @@ text-align: center;
 text-transform: uppercase;
 letter-spacing: 0.04em;
 color: #D41443;
+margin-bottom: 26px;
+
+@include tablet{
+    margin-bottom: 50px;
+  }
+  @include desktop{
+      margin-bottom: 55px;
+  }
 }
 
 // .about__main-block {
@@ -36,13 +61,31 @@ font-weight: 500;
 font-size: 12px;
 line-height: 1.62;
 color: #000000;
+margin-bottom: 47px;
+
+@include tablet{
+    margin-bottom: 49px;
+  }
+  @include desktop{
+      margin-bottom: 35px;
+  }
 }
+
 .about__text {
 font-weight: 500;
 font-size: 12px;
 line-height: 1.62; 
-color: #907E82;   
+color: #907E82; 
+margin-bottom: 17px;  
+
+@include tablet{
+    margin-bottom: 62px;
+  }
+  @include desktop{
+      margin-bottom: 45px;
+  }
 }
+
 .about__btn {
 @extend .btn;
 width: 176px;
