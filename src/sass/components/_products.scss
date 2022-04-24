@@ -1,0 +1,390 @@
+// PRODUCT
+
+.products {
+  text-align: center;
+
+  @include mobile {
+    padding-top: 121px;
+    padding-bottom: 99px;
+  }
+  @include tablet {
+    padding-top: 122px;
+    padding-bottom: 112px;
+  }
+  @include desktop {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $pink-text;
+
+    @include tablet {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+
+    @include desktop {
+      font-size: 30px;
+      line-height: 1.13;
+    }
+  }
+  &__title {
+    margin-bottom: 144px;
+
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $red-text;
+
+    @include tablet {
+      font-size: 48px;
+      margin-bottom: 150px;
+    }
+
+    @include desktop {
+      font-size: 58px;
+      line-height: 1.13;
+      letter-spacing: 0.06em;
+      margin-bottom: 259px;
+    }
+  }
+}
+
+// PRODUCT_LIST
+
+.products-list {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include tablet {
+    display: flex;
+  }
+
+  &__item {
+    border-radius: 24px;
+    transform: scale(1);
+    transition: transform 300ms linear, box-shadow 300ms linear;
+
+    @media screen and (max-width: 479px) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      width: 280px;
+    }
+
+    @include tablet {
+      width: calc((100% - 20px - 20px) / 3);
+    }
+
+    @include desktop {
+      width: calc((100% - 23px - 23px) / 3);
+    }
+
+    &:nth-child(1) {
+      background-color: $hero-light-bgc;
+
+      &::after {
+        position: absolute;
+        content: '';
+        top: 3%;
+        left: 50%;
+        width: 249px;
+        height: 252px;
+        transform: translate(-50%, -50%);
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../images/home-pic1-mob.png);
+
+        @media screen and (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          background-image: url(../images/home-pic1-mob-2x.png);
+        }
+
+        @include tablet {
+          width: 220px;
+          height: 224px;
+
+          background-image: url(../images/home-pic1-tablet.png);
+          @media screen and (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../images/home-pic1-tablet-2x.png);
+          }
+        }
+
+        @include desktop {
+          width: 335px;
+          height: 335px;
+          top: -10%;
+
+          background-image: url(../images/home-pic1.png);
+          @media screen and (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../images/home-pic1-2x.png);
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      background-color: $coffee-bgc;
+
+      &::after {
+        position: absolute;
+        content: '';
+        top: 3%;
+        left: 50%;
+        width: 249px;
+        height: 252px;
+        transform: translate(-50%, -50%);
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../images/home-pic2-mob.png);
+
+        @media screen and (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          background-image: url(../images/home-pic2-mob-2x.png);
+        }
+
+        @include tablet {
+          width: 220px;
+          height: 224px;
+
+          background-image: url(../images/home-pic2-tablet.png);
+          @media screen and (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../images/home-pic2-tablet-2x.png);
+          }
+        }
+
+        @include desktop {
+          width: 335px;
+          height: 335px;
+          top: -10%;
+
+          background-image: url(../images/home-pic2.png);
+          @media screen and (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../images/home-pic2-2x.png);
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      background-color: $green-bgc;
+
+      &::after {
+        position: absolute;
+        content: '';
+        top: 3%;
+        left: 50%;
+        width: 249px;
+        height: 252px;
+        transform: translate(-50%, -50%);
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../images/home-pic3-mob.png);
+
+        @media screen and (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          background-image: url(../images/home-pic3-mob-2x.png);
+        }
+
+        @include tablet {
+          width: 220px;
+          height: 224px;
+
+          background-image: url(../images/home-pic3-tablet.png);
+          @media screen and (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../images/home-pic3-tablet-2x.png);
+          }
+        }
+
+        @include desktop {
+          width: 335px;
+          height: 335px;
+          top: -10%;
+
+          background-image: url(../images/home-pic3.png);
+          @media screen and (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../images/home-pic3-2x.png);
+          }
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      @include mobile {
+        margin-bottom: 130px;
+      }
+
+      @include tablet {
+        margin-right: 20px;
+      }
+
+      @include desktop {
+        margin-right: 23px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      transform: scale(1.1);
+    }
+  }
+
+  &__title {
+    margin-top: 161px;
+    margin-bottom: 30px;
+
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $main-text;
+
+    @include desktop {
+      font-size: 30px;
+      line-height: 1.13;
+    }
+  }
+
+  &__three-dots {
+    position: relative;
+    content: '';
+    display: inline-block;
+    margin-bottom: 30px;
+
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+
+    background-color: $main-bgc;
+
+    &::after {
+      position: absolute;
+      content: '';
+      transform: translateX(-12px);
+
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+
+      background-color: $main-bgc;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      transform: translateX(6px);
+
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+
+      background-color: $main-bgc;
+    }
+  }
+
+  &__text {
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.52;
+    letter-spacing: 0.04em;
+    text-align: center;
+
+    color: $main-text;
+
+    @include tablet {
+      line-height: 1.76;
+      max-width: 198px;
+      margin-bottom: 40px;
+    }
+
+    @include desktop {
+      font-size: 16px;
+      line-height: 1.76;
+      max-width: 241px;
+      margin-bottom: 62px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    margin-bottom: 41px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transform: scale(1);
+    transition: transform 300ms linear, background-color 300ms linear, fill 300ms linear,
+      box-shadow 300ms linear, opacity 300ms linear;
+
+    background-color: $main-bgc;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include desktop {
+      margin-bottom: 50px;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__svg {
+    width: 10px;
+    height: 10px;
+
+    fill: $red-text;
+  }
+}
