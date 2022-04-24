@@ -19,24 +19,24 @@
   to bottom, 
   $main-bgc 5%,
   #FFF5F6 5%,
-  #FFF5F6 90%,    
+  #FFF5F6 95%,    
   );
   padding-bottom: 113px;
   @include tablet {
     padding-bottom: 165px;
     background-image: linear-gradient(
     to bottom, 
-    $main-bgc 10%,
-    #FFF5F6 10%,
-    #FFF5F6 90%,    
+    $main-bgc 9%,
+    #FFF5F6 9%,
+    #FFF5F6 91%,    
     );
   }
   @include desktop {
     background-image: linear-gradient(
     to bottom, 
-    $main-bgc 12%,
-    #FFF5F6 12%,
-    #FFF5F6 88%,    
+    $main-bgc 10%,
+    #FFF5F6 10%,
+    #FFF5F6 90%,    
     );
   }
 }
@@ -55,14 +55,16 @@
 
 .locations__item {
   width: 220px;
-  height: 427px;
   margin: auto;
-  padding: 43px 21px;
+  padding: 43px 20px;
   background: $main-bgc;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0,0.25));
   border-radius: 24px;
   margin-bottom: 20px;
+  // @include mobile {
+  //   max-width: 330px;
+  // }
   @include tablet {
     flex-basis: calc((100% - 60px)/ 3);
     height: 544px;
@@ -82,8 +84,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  border: none;
   width: 80px;
   height: 16px;
   margin-bottom: 25px;
@@ -112,7 +112,7 @@
 }
 
 .location__city {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: 500;
   font-size: 12px;
   line-height: 186%;
@@ -128,10 +128,6 @@
   }
 }
 
-.location__type-wrapper {
-  display: block;
-}
-
 .location__descripion {
   margin-bottom: 25px;
   font-weight: 500;
@@ -142,7 +138,7 @@
     font-size: 14px;
     margin-bottom: 30px;
   }
-  @media screen {
+  @include desktop {
     font-size: 16px;
     margin-bottom: 32px;
   }
@@ -150,7 +146,7 @@
 
 .location__work-wrapper {
   height: 145px;
-  width: 179px;
+  min-width: 179px;
   border: 1px solid #E1E1E1;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -177,6 +173,9 @@
     font-size: 14px;
     margin-bottom: 16px;
   }
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
 .location__work-days {
@@ -195,15 +194,23 @@
   @include tablet {
     font-size: 14px;
   }
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
 .location__buttoms {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 54px;
   @include tablet {
     flex-direction: row;
     justify-content: center;
+    margin-top: 81px;
+  }
+  @include desktop {
+    margin-top: 86px;
   }
 }
 
@@ -211,7 +218,6 @@
   width: 162px;
   height: 44px;
   @include tablet {
-    display: inline-block;
     width: 192px;
     margin-right: 15px;
   }
