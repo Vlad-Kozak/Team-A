@@ -1,6 +1,6 @@
-// *{
-//   outline:solid 1px darkcyan;
-// }
+*{
+  outline:solid 1px darkcyan;
+}
 
 .about {
  
@@ -134,9 +134,14 @@ background-image: url();
 .about__btn {
 @extend .btn;
 @extend .btn--regular;
+padding-left: 37px;
+padding-right: 37px;
 width: 176px;
 height: 44px;
+
+
 }
+
 // .ingredients__list {
 // // display: flex;
 // // flex-direction: column;
