@@ -12,7 +12,8 @@
 }
 
 .locations {
-  padding-top: 60px;
+  padding-top: 0px;
+  margin-top: 0;
   padding-bottom: 60px;
   background-image: linear-gradient(
   to bottom, 
@@ -185,9 +186,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 113px;
   @include tablet {
     flex-direction: row;
     justify-content: center;
+    padding-bottom: 165px;
   }
 }
 
@@ -197,13 +200,27 @@
   height: 44px;
   font-size: 16px;
   margin-bottom: 10px;
+  text-align: center;
   @include tablet {
     display: inline-block;
     width: 192px;
   }
+  @include desktop {
+    display: inline-block;
+    width: 198px;
+  }
+  
 }
 .btn--location {
   @include tablet {
+    width: 175px;
     margin-right: 15px;
   }
+  @include desktop {
+    width: 180px;
+  }
+}
+.icon-btn--reg {
+width: 4px;
+height: 8px;
 }
