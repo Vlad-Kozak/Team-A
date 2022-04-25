@@ -81,7 +81,7 @@
     position: relative;
     border-radius: 24px;
     transform: scale(1);
-    height: 530px;
+    height: 485px;
     transition: transform 250ms linear, box-shadow 300ms linear, height 250ms linear;
 
     &.is-open {
@@ -102,6 +102,7 @@
 
     @include desktop {
       width: calc((100% - 23px - 23px) / 3);
+      height: 525px;
     }
 
     &:nth-child(1) {
