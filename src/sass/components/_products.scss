@@ -359,7 +359,7 @@
 
   &__btn {
     position: absolute;
-    left: 144px;
+    left: 120px;
     bottom: 5px;
 
     margin-bottom: 41px;
@@ -377,10 +377,12 @@
 
     @include tablet {
       margin-bottom: 40px;
+      left: 90px;
     }
 
     @include desktop {
       margin-bottom: 50px;
+      left: 144px;
     }
 
     &:hover,
@@ -411,9 +413,19 @@
 .products-list__item .products-list__text-span {
   position: absolute;
   top: 378px;
-  left: 50px;
-  width: 241px;
+  left: 40px;
+  max-width: 200px;
   opacity: 0;
+
+  @include tablet {
+    left: 11px;
+    max-width: 198px;
+  }
+
+  @include desktop {
+    left: 47px;
+    max-width: 241px;
+  }
 }
 
 .products-list__item.is-open .products-list__text-span {
