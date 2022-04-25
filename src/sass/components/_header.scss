@@ -51,6 +51,8 @@ $mobile-menu-list-elem-border-color: #e18298;
   @include desktop {
     margin-left: 110px;
   }
+
+  transition: background-color $mobile-menu-appear-time $mobile-menu-appear-function;
 }
 
 .header__btn > span {
@@ -160,6 +162,8 @@ $mobile-menu-list-elem-border-color: #e18298;
   height: 44px;
 
   margin-bottom: 19px;
+
+  transition: background-color $mobile-menu-appear-time $mobile-menu-appear-function;
 }
 
 .mobile-menu__btn > span {
@@ -201,7 +205,14 @@ $mobile-menu-list-elem-border-color: #e18298;
 .menu__link {
   color: $main-text;
 
+  transition: color $mobile-menu-appear-time $mobile-menu-appear-function;
+
   &.curr-bar {
+    color: $red-text;
+  }
+
+  &:hover,
+  &:focus {
     color: $red-text;
   }
 }

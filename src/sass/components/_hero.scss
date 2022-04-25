@@ -107,6 +107,8 @@ $uncolored-btn-bgc: #ecebeb;
 
   border-radius: 20px;
 
+  transition: background-color $mobile-menu-appear-time $mobile-menu-appear-function;
+
   @include desktop {
     height: 40px;
     font-size: 14px;
@@ -230,6 +232,22 @@ $uncolored-btn-bgc: #ecebeb;
 .some-textblock__btn {
   display: inline-flex;
   background: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transform: scale(1);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.some-textblock__btn--transition {
+  transform: scale(1);
+  transition: transform $mobile-menu-appear-time $mobile-menu-appear-function,
+    box-shadow $mobile-menu-appear-time $mobile-menu-appear-function;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
 }
 
 .some-textblock__icon {
