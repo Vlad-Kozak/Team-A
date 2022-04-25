@@ -89,7 +89,7 @@
   margin-bottom: 25px;
   font-weight: 500;
   font-size: 12px;
-  line-height: 186%;
+  line-height: 1.86;
   letter-spacing: 0.04em;
   color: $main-text;
   background-color: $coffee-bgc;
@@ -115,7 +115,7 @@
   margin-bottom: 20px;
   font-weight: 500;
   font-size: 12px;
-  line-height: 186%;
+  line-height: 1.86;
   letter-spacing: 0.04em;
   color: $second-text;
   @include tablet {
@@ -168,7 +168,7 @@
 .location__work {
   font-weight: 500;
   font-size: 12px;
-  line-height: 186%;
+  line-height: 1.86;
   @include tablet {
     font-size: 14px;
     margin-bottom: 16px;
@@ -189,13 +189,17 @@
 .location__link {
   font-weight: 500;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 1.5;
   color: $transparent-text;
   @include tablet {
     font-size: 14px;
   }
   @include desktop {
     font-size: 16px;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
   }
 }
 
@@ -257,4 +261,12 @@
   @include desktop {
     margin-right: 17px;
   }
+}
+
+.icon__btn--dark {
+  stroke: $main-text;
+}
+
+.icon__btn--light {
+  stroke: $red-text;
 }
