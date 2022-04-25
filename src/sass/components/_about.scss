@@ -71,7 +71,7 @@ margin: 0 auto;
 
 
 .about__block{
-
+position: relative;
    
 @include tablet{
   
@@ -91,14 +91,14 @@ margin: 0 auto;
 .about__block::before{
   content: "";
   width: 100%;
-height: 133px;
+height: 534px;
   position: absolute;
- margin-left: auto;
- margin-right: auto;
-  bottom: 61px;
+//  margin-left: auto;
+//  margin-right: auto;
+  bottom: 0px;
   left: 0px;
 
-  background-image: url(/images/);
+  background-image: url(/images/milkdesk.png);
 background-repeat: no-repeat;
 
 background-position: center;
