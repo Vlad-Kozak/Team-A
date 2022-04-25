@@ -72,7 +72,9 @@ margin: 0 auto;
 
 .about__block{
 position: relative;
-   
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
 @include tablet{
   
   display: flex;
