@@ -3,7 +3,6 @@
 }
 
 .about {
- 
   padding-top: 125px;  
   padding-bottom: 0;
  background: #FFF5F6;
@@ -73,7 +72,7 @@ margin: 0 auto;
 
 .about__block{
 
-    
+    position: relative;
 @include tablet{
   
   display: flex;
@@ -86,6 +85,35 @@ margin: 0 auto;
    }
   
 }
+.about__block::before{
+  
+    content: "";
+  width: 100%;
+  height: 133px;
+  position: absolute;
+ margin-left: auto;
+ margin-right: auto;
+  bottom: 61px;
+  left: 0px;
+
+  background-image: linear-gradient(
+    to right,
+  rgb(255,245,246, 0.01), rgb(255,245,246, 0.01)
+  ), url(/images/mobmilk.png);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+
+
+@include tablet{
+  
+ display: none;
+   
+    }
+@include desktop{
+ 
+   }
+}
 
 
 .about__text-block {
@@ -93,6 +121,7 @@ margin: 0 auto;
 flex-direction: column;
 align-items: center;
 margin-top: 46px;
+
 
 
    @include tablet{
@@ -106,6 +135,7 @@ margin-top: 46px;
   }
 
 }
+
 
 .about__image {
 width: 280px;
@@ -146,7 +176,7 @@ margin-bottom: 47px;
     line-height: 1.76;
     width: 340px;
     height: 79px;
-    // margin-right: auto;
+   
   }
   @include desktop{
     font-size: 16px;
@@ -156,17 +186,13 @@ margin-bottom: 47px;
 }
 
 .about__text {
+  
 display: block;
 font-weight: 500;
 font-size: 12px;
 line-height: 1.62; 
 color: #907E82; 
-background: blue;
-background-image: url(/images/);
-background-repeat: no-repeat;
-background-size: contain;
-background-position-y: bottom;
-background-color: rgba(25, 25, 25, 0.9);
+position: relative;
 
 
 
@@ -188,6 +214,25 @@ background-color: rgba(25, 25, 25, 0.9);
     line-height: 1.94;
   }
 }
+
+// .about__text::before{
+//   content: "";
+//   width: 100%;
+//   height: 133px;
+  
+//   position: absolute;
+//   bottom: 0px;
+//   left: 0px;
+
+//   background-image: url(/images/milkjpg.jpg);
+// background-repeat: no-repeat;
+// background-position: center;
+// background-size: contain;
+// background-color: transparent;
+
+
+
+// }
 
 
 
