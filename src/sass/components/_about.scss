@@ -161,6 +161,14 @@ font-weight: 500;
 font-size: 12px;
 line-height: 1.62; 
 color: #907E82; 
+background: blue;
+background-image: url(/images/);
+background-repeat: no-repeat;
+background-size: contain;
+background-position-y: bottom;
+background-color: rgba(25, 25, 25, 0.9);
+
+
 
 @include mobile{
     width: 220px;
