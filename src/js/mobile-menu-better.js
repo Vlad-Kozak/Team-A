@@ -19,4 +19,13 @@
     backdropRef.classList.add('is-hidden');
     document.body.classList.remove('modal-open');
   });
+  const menuLinkList = document.querySelectorAll('[header-link]');
+  menuLinkList.forEach(el => {
+    el.addEventListener('click', () => {
+      menuBtnRef.classList.remove('is-open');
+      mobileMenuRef.classList.remove('is-open');
+      backdropRef.classList.add('is-hidden');
+      document.body.classList.remove('modal-open');
+    });
+  });
 })();

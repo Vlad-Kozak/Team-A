@@ -204,6 +204,14 @@ $mobile-menu-list-elem-border-color: #e18298;
 
 .menu__link {
   color: $main-text;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2857;
+
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.3125;
+  }
 
   transition: color $mobile-menu-appear-time $mobile-menu-appear-function;
 
