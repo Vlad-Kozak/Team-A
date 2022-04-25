@@ -83,29 +83,26 @@ position: relative;
   
     }
 @include desktop{
- 
-   }
-  
-}
-
-.about__block::before{
+ &::before{
   content: "";
   width: 100%;
 height: 534px;
   position: absolute;
 //  margin-left: auto;
 //  margin-right: auto;
-  bottom: 0px;
+  bottom: 0;
   left: 0px;
 
   background-image: url(/images/milkdesk.png);
 background-repeat: no-repeat;
 
 background-position: center;
-
-
-
 }
+   }
+  
+}
+
+
 
 .about__text-block::before{
   
@@ -161,7 +158,7 @@ margin-top: 46px;
 .about__image {
 width: 280px;
 height: 279px;
-background-color: olive;
+
 margin-left: auto;
 margin-right: auto;
 margin-top: 26px;
