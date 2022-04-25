@@ -1,12 +1,10 @@
-<section class="locations container">
-  <div class="location__wrapper">
-    <h2 class="locations-header hidden">OUR LOCATIONS</h2>
+<section class="locations">
+  <div class="container">
+    <h2 class="locations-header visually-hidden">OUR LOCATIONS</h2>
     <ul class="locations--list">
       <li class="locations__item">
-        <div class="location__type-wrapper">
           <span class="location__name">CAFE</span>    
           <span class="location__city">Chicago</span>
-        </div>
         <p class="location__descripion">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
         <ul class="location__work-wrapper">
           <li class="location__work">
@@ -23,7 +21,7 @@
       </li>
       <li class="locations__item">
         <div class="location__type-wrapper">
-          <span class="location__name">FOODTRUCK</span>    
+          <span class="location__name location__name--green">FOODTRUCK</span>    
           <span class="location__city">Los Angeles</span>
         </div>
         <p class="location__descripion">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
@@ -61,8 +59,18 @@
       </li>
     </ul>
     <div class="location__buttoms">
-      <button class="locations__btn button">Our Locations</button>
-      <button class="franchise__btn button">Our Franchise</button>
+      <button class="btn btn--alt btn--dark" type="button">
+        <span class="btn__name--dark">Our Locations</span>
+        <svg class="icon__btn--dark" width="12" height="10">
+          <use href="./images/icons.svg#icon-pointer"></use>
+        </svg>  
+      </button>
+      <button class="btn btn--regular btn--light" type="button">
+        <span class="btn__name--light">Franchise</span>
+        <svg class="icon__btn--light" width="12" height="10">
+          <use href="./images/icons.svg#icon-pointer"></use>
+        </svg>
+      </button>
     </div>
 </div>
 </section>
