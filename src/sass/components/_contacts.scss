@@ -15,31 +15,35 @@
   padding-top: 0px;
   margin-top: 0;
   padding-bottom: 0px;
-  background-image: linear-gradient(
-  to bottom, 
-  $main-bgc 5%,
-  #FFF5F6 5%,
-  #FFF5F6 95%,    
-  );
+  background-repeat: no-repeat;
+  // background-image: linear-gradient(
+  // to bottom, 
+  // $main-bgc 5%,
+  // #FFF5F6 5%,
+  // #FFF5F6 95%,    
+  // );
   padding-bottom: 113px;
   @include tablet {
-    padding-bottom: 165px;
-    background-image: linear-gradient(
-    to bottom, 
-    $main-bgc 9%,
-    #FFF5F6 9%,
-    #FFF5F6 91%,    
-    );
+    padding-bottom: 158px;
+    // background-image: linear-gradient(
+    // to bottom, 
+    // $main-bgc 9%,
+    // #FFF5F6 9%,
+    // #FFF5F6 91%,    
+    // );
   }
   @include desktop {
-    background-image: linear-gradient(
-    to bottom, 
+    background-image: url("../../images/sectionbg2-1x.jpg"),
+    linear-gradient(to bottom, 
     $main-bgc 10%,
     #FFF5F6 10%,
     #FFF5F6 90%,    
     );
+    background-position: 0 -10%;
+    padding-bottom: 165px;
   }
 }
+
 
 .locations--list {
   padding-left: -20px;
@@ -218,11 +222,6 @@
   }
   @include desktop {
     margin-top: 86px;
-  }
-  &:hover,
-  &:focus {
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
