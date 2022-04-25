@@ -85,6 +85,7 @@ position: relative;
   
     }
 @include desktop{
+  
  &::before{
   content: "";
   width: 100%;
@@ -130,7 +131,7 @@ background-position: center;
    
     }
 @include desktop{
- 
+  
    }
 }
 
@@ -168,14 +169,15 @@ margin-top: 26px;
     @include tablet{
     width: 340px;
     height: 339px;
-    margin-left: 0;
-    margin-right: 0;
+    // margin-left: 0;
+    // margin-right: 0;
     margin-top: 50px;
   }
   @include desktop{
     width: 516px;
     height: 516px;
     margin-top: 55px;
+   margin-bottom: 65px;
   }
 }
 
@@ -199,6 +201,7 @@ margin-bottom: 47px;
    
   }
   @include desktop{
+    letter-spacing: 0.04em;
     font-size: 16px;
     width: 463px;
     height: 79px;
