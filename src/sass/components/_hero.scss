@@ -1,0 +1,409 @@
+$absolute-content-z: 0;
+$text-content-z: 1;
+$colored-btn-bgc: #c7133e;
+$uncolored-btn-bgc: #ecebeb;
+
+.hero {
+  background-color: $hero-light-bgc;
+}
+
+.hero__container {
+  position: relative;
+  min-height: 502px;
+
+  @include mobile {
+    overflow: hidden;
+  }
+
+  @include tablet {
+    min-height: 399px;
+  }
+
+  @include desktop {
+    min-height: 665px;
+  }
+}
+
+.hero__text-block {
+  position: absolute;
+  z-index: $text-content-z;
+  bottom: 160px;
+
+  @include tablet {
+    bottom: 173px;
+  }
+
+  @include desktop {
+    bottom: 292px;
+  }
+}
+
+.hero__header {
+  max-width: 218px;
+
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $main-text;
+
+  margin-bottom: 19px;
+
+  & > span {
+    font-size: 48px;
+    line-height: 0.965;
+    color: $red-text;
+    text-transform: uppercase;
+  }
+
+  @include tablet {
+    max-width: 169px;
+    font-size: 25px;
+    line-height: 1.13636;
+    margin-bottom: 20px;
+
+    & > span {
+      font-size: 34px;
+      line-height: 0.905;
+    }
+  }
+
+  @include desktop {
+    max-width: 277px;
+    font-size: 38px;
+    line-height: 1.1579;
+
+    & > span {
+      font-size: 58px;
+      line-height: 0.905;
+    }
+  }
+}
+
+.small-menu {
+  display: flex;
+}
+
+.small-menu__elem {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.small-menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 24px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+
+  border-radius: 20px;
+
+  transition: background-color $mobile-menu-appear-time $mobile-menu-appear-function;
+
+  @include desktop {
+    height: 40px;
+    font-size: 14px;
+    line-height: 1.2857;
+  }
+
+  &--colored {
+    width: 61px;
+    color: $main-text;
+    background-color: $red-text;
+
+    &:hover,
+    &:focus {
+      background-color: $colored-btn-bgc;
+    }
+
+    @include desktop {
+      width: 104px;
+    }
+  }
+
+  &--uncolored {
+    width: 82px;
+    color: $red-text;
+    background-color: $main-bgc;
+
+    &:hover,
+    &:focus {
+      background-color: $uncolored-btn-bgc;
+    }
+
+    @include desktop {
+      width: 138px;
+    }
+  }
+}
+
+.hero__circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: $hero-dark-bgc;
+  z-index: $absolute-content-z;
+
+  &--big {
+    bottom: 75px;
+    right: -52px; //-36 - 26, где 26 это 346-320
+
+    width: 346px;
+    height: 344px;
+
+    @include tablet {
+      bottom: 46px;
+      right: 123px; //137 - 14
+      width: 324px;
+      height: 322px;
+    }
+
+    @include desktop {
+      bottom: 75px;
+      right: 212px; //267 - 55
+      width: 538px;
+      height: 538px;
+    }
+  }
+}
+
+.circle__icon {
+  position: absolute;
+  bottom: 0px;
+  right: 32px;
+  z-index: $absolute-content-z;
+
+  @include tablet {
+    right: 233px; //247 - 14
+  }
+  @include desktop {
+    right: 393px; //448 - 55
+  }
+}
+
+//ABSOLUTE USELESS CONTENT
+
+.hero__other-content {
+  @include mobile {
+    display: none;
+  }
+}
+
+.hero__some-textblock {
+  position: absolute;
+  bottom: 34px;
+  left: 140px; //154 - 14
+
+  @include desktop {
+    bottom: 56px;
+    left: 180px; //295 - 115
+  }
+}
+
+.some-textblock__paragraph {
+  max-width: 114px;
+
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.5;
+
+  color: $main-text;
+
+  margin-bottom: 7px;
+
+  @include desktop {
+    max-width: 200px;
+
+    font-size: 14px;
+    line-height: 1.4;
+
+    margin-bottom: 20px;
+  }
+}
+
+.hidden-text {
+  position: relative;
+}
+
+.hidden-text__paragraph {
+  position: absolute;
+  top: -4px;
+
+  max-width: 114px;
+
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.5;
+
+  color: $main-text;
+
+  pointer-events: none;
+
+  opacity: 0;
+  transition: opacity 500ms $mobile-menu-appear-function;
+
+  @include desktop {
+    max-width: 200px;
+    top: -8px;
+    font-size: 14px;
+    line-height: 1.4;
+
+    margin-bottom: 20px;
+  }
+
+  .some-textblock__btn--transition.is-open + & {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.some-textblock__btn {
+  display: inline-flex;
+  background: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transform: scale(1);
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transform: translateX(0) rotateY(0);
+}
+
+.some-textblock__btn--transition {
+  transform: scale(1);
+  transition: transform 500ms $mobile-menu-appear-function,
+    box-shadow $mobile-menu-appear-time $mobile-menu-appear-function;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  &.is-open {
+    @include tablet {
+      transform: translateX(115px) rotateY(180deg) scale(1.2);
+    }
+    @include desktop {
+      transform: translateX(200px) rotateY(180deg) scale(1.2);
+    }
+  }
+}
+
+.some-textblock__icon {
+  width: 18px;
+  height: 18px;
+
+  @include desktop {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.indicators {
+  position: absolute;
+  top: 96px;
+  right: 30px;
+
+  @include desktop {
+    top: 160px;
+  }
+}
+
+.indicator {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+
+    @include desktop {
+      margin-bottom: 15px;
+    }
+  }
+
+  & > span {
+    position: relative; //Чтоб работал z-index
+    display: block;
+    width: 100%;
+    z-index: 1;
+
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.1429;
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $red-text;
+
+    @include desktop {
+      font-size: 46px;
+      line-height: 1.1521;
+
+      margin-bottom: 2px;
+    }
+  }
+
+  & > p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    text-align: right;
+
+    color: $main-text;
+
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.2857;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $main-bgc;
+    z-index: 0;
+    top: 0;
+    right: -10px;
+
+    @include desktop {
+      width: 30px;
+      height: 30px;
+      right: -18px;
+    }
+  }
+}
+
+.milk-img {
+  position: absolute;
+  bottom: 28px;
+
+  @include desktop {
+    bottom: 45px;
+    left: -38px;
+  }
+}
+
+.tasty-img {
+  position: absolute;
+  bottom: 0;
+  right: 20px; //34 - 14
+
+  @include desktop {
+    right: 11px;
+  }
+}

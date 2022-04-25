@@ -78,9 +78,15 @@
   }
 
   &__item {
+    position: relative;
     border-radius: 24px;
     transform: scale(1);
-    transition: transform 300ms linear, box-shadow 300ms linear;
+    height: 485px;
+    transition: transform 250ms linear, box-shadow 300ms linear, height 250ms linear;
+
+    &.is-open {
+      height: 630px;
+    }
 
     @media screen and (max-width: 479px) {
       width: 100%;
@@ -96,6 +102,7 @@
 
     @include desktop {
       width: calc((100% - 23px - 23px) / 3);
+      height: 525px;
     }
 
     &:nth-child(1) {
@@ -263,7 +270,7 @@
     &:hover,
     &:focus {
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-      transform: scale(1.1);
+      transform: scale(1.025);
     }
   }
 
@@ -352,7 +359,10 @@
   }
 
   &__btn {
-    position: relative;
+    position: absolute;
+    left: 120px;
+    bottom: 5px;
+
     margin-bottom: 41px;
     cursor: pointer;
     width: 40px;
@@ -368,16 +378,28 @@
 
     @include tablet {
       margin-bottom: 40px;
+      left: 90px;
     }
 
     @include desktop {
       margin-bottom: 50px;
+      left: 144px;
     }
 
     &:hover,
     &:focus {
       transform: scale(1.2);
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    & .products-list__svg {
+      transition: transform 250ms linear;
+    }
+
+    &.is-open {
+      & .products-list__svg {
+        transform: rotateZ(-90deg);
+      }
     }
   }
 
@@ -387,4 +409,27 @@
 
     fill: $red-text;
   }
+}
+
+.products-list__item .products-list__text-span {
+  position: absolute;
+  top: 378px;
+  left: 40px;
+  max-width: 200px;
+  opacity: 0;
+
+  @include tablet {
+    left: 11px;
+    max-width: 198px;
+  }
+
+  @include desktop {
+    left: 47px;
+    max-width: 241px;
+  }
+}
+
+.products-list__item.is-open .products-list__text-span {
+  transition: opacity 250ms linear 250ms;
+  opacity: 1;
 }
