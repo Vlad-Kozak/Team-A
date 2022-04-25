@@ -5,6 +5,12 @@ $mobile-menu-appear-time: 250ms;
 $mobile-menu-appear-function: cubic-bezier(0.4, 0, 0.2, 1);
 $mobile-menu-list-elem-border-color: #e18298;
 
+body {
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
 .header {
   position: absolute;
   width: 100%;
