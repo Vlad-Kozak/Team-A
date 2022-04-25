@@ -70,13 +70,13 @@
     height: 544px;
     margin-left: 20px;
     padding: 50px 31px;
+    margin-bottom: 0px;
   }
   @include desktop {
     flex-basis: calc((100% - 90px)/ 3);
     height: 544px;
     padding: 51px 44px;
     margin-left: 30px;
-    margin-bottom: 86px;
   }
 }
 
@@ -132,10 +132,11 @@
   margin-bottom: 25px;
   font-weight: 500;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 1.15;
   color: $transparent-text;
   @include tablet {
     font-size: 14px;
+    line-height: 1.66;
     margin-bottom: 30px;
   }
   @include desktop {
@@ -145,6 +146,8 @@
 }
 
 .location__work-wrapper {
+  line-height: 1.83;
+  letter-spacing: 4%;
   height: 145px;
   min-width: 179px;
   border: 1px solid #E1E1E1;
@@ -215,6 +218,11 @@
   }
   @include desktop {
     margin-top: 86px;
+  }
+  &:hover,
+  &:focus {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
