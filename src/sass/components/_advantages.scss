@@ -1,0 +1,129 @@
+.advantages {
+  padding-top: 39px;
+  padding-bottom: 97px;
+  background-color: #fff5f6;
+  @include tablet {
+    padding-top: 66px;
+    padding-bottom: 140px;
+  }
+  @include desktop {
+    padding-top: 39px;
+    padding-bottom: 139px;
+  }
+}
+
+.advantages__list {
+  @include tablet {
+    display: flex;
+  }
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.advantages__item {
+  @include desktop {
+    width: calc((100% - 60px) / 3);
+  }
+}
+
+.advantages__item:not(:last-child) {
+  margin-right: 60px;
+  @include desktop {
+    margin-right: 30px;
+  }
+}
+
+.number1 {
+  display: flex;
+  flex-direction: column;
+}
+.number2 {
+  display: flex;
+  flex-direction: column;
+}
+.number3 {
+  display: flex;
+  flex-direction: column;
+}
+.number1::before {
+  margin-top: 38px;
+  margin-bottom: 16px;
+  content: url(../images/icon.png);
+  width: 33px;
+  height: 50px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+}
+.number2::before {
+  margin-top: 38px;
+  margin-bottom: 16px;
+  content: url(../images/icon2.png);
+  width: 50px;
+  height: 50px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+}
+.number3::before {
+  margin-top: 38px;
+  margin-bottom: 16px;
+  content: url(../images/icon3.png);
+  width: 44px;
+  height: 50px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+}
+.advantages__number {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1, 14;
+  letter-spacing: 0.04em;
+  color: $red-text;
+  @include tablet {
+    font-size: 48px;
+    line-height: 1.15;
+  }
+  @include desktop {
+    font-size: 58px;
+    line-height: 1.14;
+  }
+}
+.advantages__text {
+  max-width: 230px;
+  margin-top: 10px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  color: $second-text;
+  @include tablet {
+    max-width: 180px;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.74;
+  }
+  @include desktop {
+    max-width: 330px;
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: 0.02em;
+  }
+}
