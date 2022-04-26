@@ -1,44 +1,46 @@
 .about {
   padding-top: 125px;
-  padding-bottom: 0;
-  background: #fff5f6;
+  background-color: #fff5f6;
+
+  @include mobile {
+    background-image: url(/images/milkdesk.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: left 0px bottom 60px;
+  }
 
   @include tablet {
     padding-top: 130px;
   }
+
   @include desktop {
     padding-top: 125px;
-  }
-}
 
-.about > .container {
-  max-width: 1280px;
-  justify-content: center;
-  margin-right: auto;
-  margin-left: auto;
-
-  @include desktop {
     background-image: url(/images/milkdesk.png);
     background-repeat: no-repeat;
-    background-position: center;
-    background-position-y: 183px;
+    background-size: 100%;
+    background-position: left 0px bottom 0px;
   }
 }
 
 .about__pre-title {
-  font-family: 'Titan One', sans-serif;
+  font-family: 'Titan One', cursive;
   font-size: 18px;
-  line-height: calc(21 / 16);
+  line-height: calc(21 / 18);
   text-align: center;
   text-transform: uppercase;
   color: #ffa5ba;
   margin-bottom: 15px;
 
   @include tablet {
-    margin-bottom: 16px;
+    font-size: 26px;
+    line-height: calc(30 / 26);
   }
   @include desktop {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
+
+    font-size: 30px;
+    line-height: calc(34 / 30);
   }
 }
 
@@ -55,6 +57,15 @@
 
   @include tablet {
     max-width: 100%;
+
+    font-size: 48px;
+    line-height: calc(55 / 48);
+  }
+
+  @include desktop {
+    font-size: 58px;
+    line-height: calc(66 / 58);
+    letter-spacing: 0.06em;
   }
 }
 
@@ -84,26 +95,8 @@
   }
 
   @include desktop {
-    margin-left: 74px;
+    margin-left: 71px;
     margin-top: 106px;
-  }
-}
-
-.about__text-block::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 133px;
-  margin-left: auto;
-  margin-right: auto;
-  bottom: 61px;
-  left: 0px;
-  background-image: url(/images/mobmilk.png);
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @include tablet {
-    display: none;
   }
 }
 
@@ -134,7 +127,7 @@
   font-size: 12px;
   line-height: 1.62;
   color: #000000;
-  margin-bottom: 47px;
+  margin-bottom: 25px;
 
   @include mobile {
     width: 220px;
@@ -146,14 +139,12 @@
     font-size: 14px;
     line-height: 1.76;
     width: 340px;
-    height: 79px;
   }
 
   @include desktop {
     letter-spacing: 0.04em;
     font-size: 16px;
     width: 463px;
-    height: 79px;
     margin-bottom: 35px;
   }
 }
@@ -193,10 +184,7 @@
   margin-right: 44px;
   width: 176px;
   height: 44px;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 250ms;
+
   & > span {
     margin-right: 12px;
   }
@@ -208,11 +196,6 @@
 
   @include desktop {
     margin-top: 45px;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: #ecebeb;
   }
 }
 
