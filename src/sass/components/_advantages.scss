@@ -1,6 +1,18 @@
+.advantages{
+    padding-top: 39px;
+    padding-bottom: 97px;
+    background-color:#FFF5F6;
+    @include tablet{
+        padding-top: 66px;
+        padding-bottom: 140px;}
+        @include desktop{
+            padding-top: 39px;
+            padding-bottom: 139px;}
+}
 
 .advantages__list{
     @include tablet{
+    margin-bottom: 140px;
     display: flex;}
 }
 .visually-hidden {
@@ -17,7 +29,7 @@
 }
 .advantages__item:not(:last-child){
     margin-right: 60px;
-    @include desck-top{
+    @include desktop{
         margin-right: 130px;
     }
 }
@@ -69,7 +81,7 @@
     font-size: 48px;
     line-height: 1.15;
     }
-    @include desck-top{
+    @include desktop{
         font-size: 58px;
         line-height: 1.14;
         }
@@ -91,7 +103,7 @@
         font-size: 14px;
         line-height: 1.74;
     }
-    @include desck-top{
+    @include desktop{
         max-width: 230px;
         font-size: 16px;
         line-height: 1.76;
