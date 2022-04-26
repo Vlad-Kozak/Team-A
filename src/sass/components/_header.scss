@@ -49,6 +49,8 @@ body {
     display: none;
   }
 
+  stroke: $red-text;
+
   width: 159px;
   height: 44px;
 
@@ -169,6 +171,8 @@ body {
 
   margin-bottom: 19px;
 
+  stroke: $red-text;
+
   transition: background-color $mobile-menu-appear-time $mobile-menu-appear-function;
 }
 
@@ -221,9 +225,9 @@ body {
 
   transition: color $mobile-menu-appear-time $mobile-menu-appear-function;
 
-  &.curr-bar {
-    color: $red-text;
-  }
+  // &.curr-bar {
+  //   color: $red-text;
+  // }
 
   &:hover,
   &:focus {
