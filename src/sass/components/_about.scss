@@ -1,86 +1,75 @@
 .about {
-  padding-top: 125px;  
+  padding-top: 125px;
   padding-bottom: 0;
-  background: #FFF5F6;
+  background: #fff5f6;
 
-  @include tablet{
+  @include tablet {
     padding-top: 130px;
   }
-  @include desktop{
+  @include desktop {
     padding-top: 125px;
   }
 }
+
 .about > .container {
   max-width: 1280px;
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
 
-
-// @include tablet{
-//     }
-
-@include desktop{
-  background-image: url(/images/milkdesk.png);
-background-repeat: no-repeat;
-background-position: center;
-background-position-y: 183px;
-   }
+  @include desktop {
+    background-image: url(/images/milkdesk.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 183px;
+  }
 }
 
 .about__pre-title {
-font-family: 'Titan One', sans-serif; 
-font-size:18px;
-line-height: calc(21/16);
-text-align: center;
-text-transform: uppercase;
-color: #FFA5BA;
-margin-bottom: 15px;
-
-
-@include tablet{
-  margin-bottom: 16px;
-  }
-@include desktop{
+  font-family: 'Titan One', sans-serif;
+  font-size: 18px;
+  line-height: calc(21 / 16);
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffa5ba;
   margin-bottom: 15px;
+
+  @include tablet {
+    margin-bottom: 16px;
+  }
+  @include desktop {
+    margin-bottom: 15px;
   }
 }
-
 
 .about__title {
-font-family: 'Titan One', sans-serif; 
-font-size: 34px;
-line-height: calc(39/34);
-text-align: center;
-text-transform: uppercase;
-letter-spacing: 0.04em;
-color: #D41443;
-max-width: 200px;
-margin: 0 auto;
+  font-family: 'Titan One', sans-serif;
+  font-size: 34px;
+  line-height: calc(39 / 34);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #d41443;
+  max-width: 200px;
+  margin: 0 auto;
 
-
-@include tablet{
-  max-width: 100%;
+  @include tablet {
+    max-width: 100%;
   }
 }
 
-
-.about__block{
+.about__block {
   position: relative;
   max-width: 1280px;
   margin-right: auto;
   margin-left: auto;
 
-@include tablet{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-    }
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-
-
-
-
+}
 
 .about__text-block {
   position: relative;
@@ -89,20 +78,19 @@ margin: 0 auto;
   align-items: center;
   margin-top: 46px;
 
-   @include tablet{
+  @include tablet {
     margin-left: 17px;
     margin-top: 100px;
   }
 
-  @include desktop{
+  @include desktop {
     margin-left: 74px;
     margin-top: 106px;
   }
-
 }
 
-.about__text-block::before{
-  content: "";
+.about__text-block::before {
+  content: '';
   position: absolute;
   width: 100%;
   height: 133px;
@@ -114,52 +102,54 @@ margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
 
-@include tablet{
- display: none;
-    }
+  @include tablet {
+    display: none;
+  }
 }
 
-
 .about__image {
-width: 280px;
-height: 279px;
-margin-left: auto;
-margin-right: auto;
-margin-top: 26px;
+  width: 280px;
+  height: 279px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 26px;
 
-    @include tablet{
+  @include tablet {
     width: 340px;
     height: 339px;
     margin-left: 0;
     margin-right: 0;
     margin-top: 50px;
   }
-  @include desktop{
+
+  @include desktop {
     width: 516px;
     height: 516px;
     margin-top: 55px;
   }
 }
 
-.about__main-text { 
-font-weight: 500;
-font-size: 12px;
-line-height: 1.62;
-color: #000000;
-margin-bottom: 47px;
+.about__main-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  color: #000000;
+  margin-bottom: 47px;
 
-@include mobile{
+  @include mobile {
     width: 220px;
     margin-left: auto;
     margin-right: auto;
-}
-@include tablet{
+  }
+
+  @include tablet {
     font-size: 14px;
     line-height: 1.76;
     width: 340px;
     height: 79px;
   }
-  @include desktop{
+
+  @include desktop {
     letter-spacing: 0.04em;
     font-size: 16px;
     width: 463px;
@@ -169,67 +159,64 @@ margin-bottom: 47px;
 }
 
 .about__text {
-display: block;
-font-weight: 500;
-font-size: 12px;
-line-height: 1.62; 
-color: #907E82; 
-position: relative;
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  color: #907e82;
+  position: relative;
 
-
-@include mobile{
+  @include mobile {
     width: 220px;
     margin-left: auto;
     margin-right: auto;
-}
+  }
 
-@include tablet{
+  @include tablet {
     font-size: 14px;
     line-height: 1.76;
     width: 340px;
     height: 155px;
   }
 
-  @include desktop{
+  @include desktop {
     width: 463px;
     line-height: 1.94;
   }
 }
 
-
-
-
 .about__btn {
-@extend .btn;
-@extend .btn--regular;
-margin-bottom: auto;
-margin-top: 17px;
-margin-right: 44px;
-width: 176px;
-height: 44px;
-transition-property: background-color;
-  transition-duration:250ms;
+  @extend .btn;
+  @extend .btn--regular;
+  margin-bottom: auto;
+  margin-top: 17px;
+  margin-right: 44px;
+  width: 176px;
+  height: 44px;
+  transition-property: background-color;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay:250ms;
-& > span {
-  margin-right: 12px;
-}
+  transition-delay: 250ms;
+  & > span {
+    margin-right: 12px;
+  }
 
-@include tablet{
+  @include tablet {
     margin-top: 62px;
     margin-right: auto;
   }
-  @include desktop{
+
+  @include desktop {
     margin-top: 45px;
   }
 
-&:hover,
-&:focus {
+  &:hover,
+  &:focus {
     background-color: #ecebeb;
+  }
 }
-}
-.btn__icon{
+
+.btn__icon {
   width: 12px;
   height: 10px;
- 
 }
