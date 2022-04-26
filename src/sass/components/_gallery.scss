@@ -1,43 +1,41 @@
 .visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
-.gallery{ 
-    display: flex;
-    background-image: linear-gradient(
-  to bottom,
+.gallery {
+  display: flex;
+  background-image: linear-gradient(
+    to bottom,
 
-  #FFF5F6 40%,
-  #FFFFFF 1%,
-  );}
+    #fff5f6 40%,
+    #ffffff 1%
+  );
+}
 
-  .gallery-content{
-      display: flex;
-      align-items: center;
+.gallery-content {
+  display: flex;
+  align-items: center;
+}
+.gallery-content__img {
+  transform: scale(1);
+  transition: transform 250ms linear;
+  margin-bottom: 6px;
+  &:hover,
+  &:focus {
+    transform: scale(0.9);
   }
-  .gallery-content__img{
-      transform: scale(1);
-      transition: transform 250ms linear ;
-      margin-bottom: 6px;
-      &:hover,
-      &:focus{
-          transform: scale(0.9);
-      }
-  }
-  .gallery-content__picture-five{
-      margin-bottom: 25px;
-  }
-  .wrap:not(:last-child){
-      margin-right: 6px;
-      
-
-  }
-    
+}
+.gallery-content__picture-five {
+  margin-bottom: 25px;
+}
+.wrap:not(:last-child) {
+  margin-right: 6px;
+}
