@@ -34,6 +34,12 @@
   @include desktop {
     width: calc((100% - 60px) / 3);
   }
+
+  & + & {
+    @include mobile {
+      margin-top: 38px;
+    }
+  }
 }
 
 .advantages__item:not(:last-child) {
@@ -56,7 +62,6 @@
   flex-direction: column;
 }
 .number1::before {
-  margin-top: 38px;
   margin-bottom: 16px;
   content: url(../images/icon.png);
   width: 33px;
@@ -67,7 +72,6 @@
   }
 }
 .number2::before {
-  margin-top: 38px;
   margin-bottom: 16px;
   content: url(../images/icon2.png);
   width: 50px;
@@ -78,7 +82,6 @@
   }
 }
 .number3::before {
-  margin-top: 38px;
   margin-bottom: 16px;
   content: url(../images/icon3.png);
   width: 44px;
