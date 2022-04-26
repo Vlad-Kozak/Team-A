@@ -90,6 +90,13 @@
 
   @include desktop {
     width: 813px;
+
+    background: repeating-linear-gradient(
+      transparent 0px,
+      transparent 28px,
+      #e1e1e1 28px,
+      #e1e1e1 29px
+    );
   }
 }
 
