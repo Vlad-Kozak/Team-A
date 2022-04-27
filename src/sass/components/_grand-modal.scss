@@ -1,0 +1,168 @@
+$grand-modal-z: 15;
+
+.grand-modal {
+  position: absolute;
+  z-index: $grand-modal-z;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 90%;
+  max-width: 380px;
+  height: 600px;
+
+  padding: 45px 20px;
+
+  background-color: $hero-light-bgc;
+  border-radius: 12px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+
+  @include tablet {
+    max-width: 450px;
+  }
+}
+
+.grand-modal__btn-close {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  width: 28px;
+  height: 28px;
+
+  background-color: transparent;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $red-text;
+  }
+}
+
+.grand-modal__btn-close--transition {
+  transition: background-color $mobile-menu-appear-time $mobile-menu-appear-function;
+}
+
+.buy-form {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+}
+
+.buy-form__header {
+  font-family: 'Titan One';
+  color: $red-text;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  max-height: 21px;
+  margin-bottom: 32px;
+}
+
+.grand-modal__field {
+  margin-bottom: 8px;
+}
+
+.grand-modal__label {
+  display: block;
+  margin-bottom: 4px;
+
+  color: $red-text;
+  // font-family: 'Titan One';
+
+  font-size: 13px;
+}
+
+.grand-modal__input {
+  background-color: $main-bgc;
+  border: 1px solid $mobile-menu-list-elem-border-color;
+  border-radius: 6px;
+  width: 100%;
+  height: 30px;
+  max-height: 30px;
+
+  padding: 0 8px;
+}
+
+.grand-modal--transition {
+  transition: border-color 300ms $mobile-menu-appear-function;
+
+  &:hover,
+  &:focus {
+    border-color: $red-text;
+    outline: none;
+  }
+}
+
+.grand-modal__comment {
+  background-color: $main-bgc;
+  border: 1px solid $mobile-menu-list-elem-border-color;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 100%;
+  height: 120px;
+  max-height: 120px;
+  padding: 2px 8px;
+}
+
+.grand-modal__check-wrapper {
+  margin-top: 20px;
+}
+
+.grand-modal__privacy-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.grand-modal__privacy-label > svg {
+  .grand-modal__privacy-check:checked + & {
+    background-color: $red-text;
+    border-radius: 2px;
+  }
+}
+
+.check-box {
+  .grand-modal__privacy-check:checked + .grand-modal__privacy-label > svg > & {
+    fill: transparent;
+  }
+}
+
+.check-icon {
+  fill: transparent;
+
+  .grand-modal__privacy-check:checked + .grand-modal__privacy-label > svg > & {
+    fill: $main-text;
+  }
+}
+
+.grand-modal__privacy-text {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.grand-modal__privacy-link {
+  text-decoration: underline;
+  color: #002efc;
+  font-size: 12px;
+}
+
+.grand-modal__button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.grand-modal__submit {
+  width: 240px;
+  height: 40px;
+}
