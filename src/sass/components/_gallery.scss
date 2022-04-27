@@ -1,0 +1,84 @@
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.gallery .container {
+  @media screen and (max-width: 340px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.gallery {
+  display: flex;
+  background-image: linear-gradient(to bottom, #fff5f6 40%, #ffffff 1%);
+}
+
+.gallery-content {
+  display: flex;
+  align-items: center;
+}
+
+.gallery-content__img {
+  border-radius: 15%;
+  transform: scale(1);
+  transition: transform 250ms linear;
+  margin-bottom: 6px;
+
+  @include mobile {
+    margin-bottom: 3px;
+  }
+
+  &:hover,
+  &:focus {
+    position: relative;
+    z-index: 2;
+    transform: scale(1.3);
+  }
+}
+
+.gallery-content__case {
+  display: flex;
+
+  @include desktop {
+    flex-direction: row-reverse;
+  }
+}
+
+.gallery-content__picture-three {
+  @include desktop {
+    margin-top: 110px;
+  }
+}
+
+.gallery-content__picture-four {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 20px;
+  margin-right: 6px;
+
+  @include mobile {
+    margin-right: 3px;
+  }
+}
+
+.gallery-content__picture-five {
+  margin-bottom: 25px;
+}
+
+.wrap:not(:last-child) {
+  margin-right: 6px;
+
+  @include mobile {
+    margin-right: 3px;
+  }
+}
