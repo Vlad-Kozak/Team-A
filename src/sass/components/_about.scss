@@ -106,7 +106,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 26px;
-
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   @include tablet {
     width: 340px;
     height: 339px;
@@ -119,6 +119,9 @@
     width: 516px;
     height: 516px;
     margin-top: 55px;
+    &:hover{
+      transform: rotate(5deg);
+    }
   }
 }
 
@@ -206,7 +209,6 @@
 
 
 .about__backdrop{
-  
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -233,7 +235,7 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   overflow: hidden;
-
+  border-radius: 10px;
  @include desktop{
    padding: 80px;
  }
@@ -272,6 +274,8 @@ margin: 40px auto;
   height: 100%;
   align-items: center;
   background-size: 60vw;
+
+  
   }
   
 }
@@ -280,14 +284,15 @@ margin: 40px auto;
 display: none;
  height: 100%;
  margin-bottom: 60px;
+ 
 
 @include desktop{
   display: block;
  width: calc(100%/3);
  
-//  cursor: pointer;
-  &:hover{
-    
+
+  &:hover, &:focus{
+   
     .about-overlay__name{
    color: #d41443;
 
@@ -304,11 +309,13 @@ display: none;
 }
 
 }
+
 .about-overlay{
-  
-  
+  display: none;
+
   @include desktop {
      position: absolute;
+     display: block;
  left: 0;
  height: 100%;
  width: 100%;
@@ -316,6 +323,7 @@ padding: 63px 24px;
 line-height: 1.56;
 letter-spacing: 0.03em;
 opacity: 0;
+
   }
 
 }
