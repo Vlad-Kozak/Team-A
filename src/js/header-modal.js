@@ -3,7 +3,7 @@
   const mobileMenuBtnRef = document.querySelector('[data-mobile-menu-button]');
   const mobileMenuRef = document.querySelector('[data-menu]');
   const mobileMenuOpenBtn = document.querySelector('[data-menu-button]');
-  const backdropRef = document.querySelector('[backdrop]');
+  const backdropRef = document.querySelector('[data-backdrop]');
   let backdropApplicate = 2;
   mobileMenuBtnRef.addEventListener('click', () => {
     mobileMenuRef.classList.remove('is-open');

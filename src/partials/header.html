@@ -40,19 +40,19 @@
         </div>
         <ul class="menu">
           <li class="menu__elem">
-            <a href="#" class="menu__link curr-bar" header-link>Home</a>
+            <a href="#" class="menu__link curr-bar" data-header-link>Home</a>
           </li>
           <li class="menu__elem">
-            <a href="#hero" class="menu__link" header-link>About us</a>
+            <a href="#hero" class="menu__link" data-header-link>About us</a>
           </li>
           <li class="menu__elem">
-            <a href="#about" class="menu__link" header-link>How it’s made?</a>
+            <a href="#about" class="menu__link" data-header-link>How it’s made?</a>
           </li>
           <li class="menu__elem">
-            <a href="#products" class="menu__link" header-link>Our products</a>
+            <a href="#products" class="menu__link" data-header-link>Our products</a>
           </li>
           <li class="menu__elem">
-            <a href="#contacts" class="menu__link" header-link>Contact</a>
+            <a href="#contacts" class="menu__link" data-header-link>Contact</a>
           </li>
         </ul>
       </div>
@@ -65,7 +65,7 @@
     </button>
   </div>
 </header>
-<div class="backdrop backdrop--transition is-hidden" backdrop>
+<div class="backdrop backdrop--transition is-hidden" data-backdrop>
   <div class="grand-modal backdrop--transition is-hidden" data-grand-modal>
     <button
       class="grand-modal__btn-close grand-modal__btn-close--transition"
@@ -84,6 +84,7 @@
           type="text"
           class="grand-modal__input grand-modal--transition"
           name="grand-modal__name"
+          id="grand-modal__name"
         />
       </div>
       <div class="grand-modal__field">
@@ -92,6 +93,7 @@
           type="text"
           class="grand-modal__input grand-modal--transition"
           name="grand-modal__mail"
+          id="grand-modal__mail"
         />
       </div>
       <div class="grand-modal__field">
@@ -100,13 +102,14 @@
           type="text"
           class="grand-modal__input grand-modal--transition"
           name="grand-modal__tel"
+          id="grand-modal__tel"
         />
       </div>
       <div class="grand-modal__field">
         <label for="grand-modal__comment" class="grand-modal__label">Order</label>
         <textarea
           name="grand-modal__comment"
-          id=""
+          id="grand-modal__comment"
           cols="20"
           rows="5"
           class="grand-modal__comment grand-modal--transition"
@@ -126,9 +129,9 @@
             <use href="./images/icons.svg#icon-checkbox" class="check-box"></use>
             <use href="./images/icons.svg#icon-tick" class="check-icon"></use>
           </svg>
-          <p class="grand-modal__privacy-text">
+          <span class="grand-modal__privacy-text">
             I accept <a href="" class="grand-modal__privacy-link">Terms and Conditions</a>
-          </p>
+          </span>
         </label>
       </div>
       <div class="grand-modal__button-wrapper">
