@@ -49,13 +49,6 @@ $grand-modal-z: 15;
   transition: background-color $mobile-menu-appear-time $mobile-menu-appear-function;
 }
 
-.buy-form {
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   justify-content: center;
-}
-
 .buy-form__header {
   font-family: 'Titan One';
   color: $red-text;
@@ -75,7 +68,6 @@ $grand-modal-z: 15;
   margin-bottom: 4px;
 
   color: $red-text;
-  // font-family: 'Titan One';
 
   font-size: 13px;
 }
