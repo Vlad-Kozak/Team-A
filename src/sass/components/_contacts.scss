@@ -42,10 +42,8 @@
     padding-bottom: 165px;
     background-size: contain;
     background-position: 0 20%;
-
   }
 }
-
 
 .locations--list {
   @include tablet {
@@ -282,8 +280,6 @@
   stroke: $red-text;
 }
 
-// .mobile-menu-close-icon
-
 /* MODAL SECTION */
 
 .locations__backdrop {
@@ -298,24 +294,46 @@
 }
 
 .locations__modal {
-  position: absolute;
+  position: fixed;
+  z-index: 3;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 320px; 
-  /* 425 */
-  max-height: 100% ;
-  /* 650 */
-  background-color: #ffffff;
-  border-radius: 4px;
-  padding: 25px;
-  margin: auto;
+  height: 600px ;
+  background-color: $hero-dark-bgc;
+  border-radius: 20px;
+  padding: 24px;
   transition: all 0.8s ease 0s;
+  @include tablet {
+    width: 425px; 
+    height: 650px;
+    max-height: 100%;
+    overflow: scroll;
+  }
+  @include desktop {
+    width: 425px; 
+    height: 650px;
+    overflow: hidden;
+  }
 }
 
-.modal-map {
-  width: 320px;
-  height: fit-content;
+.modal__map {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  // padding: 20px ;
+  vertical-align: top; 
+  border-radius: 5px; 
+  width: 100%;
+  height: calc(100% - 20px);
+  @include tablet {
+    width: 100%;
+    height: calc(100% - 20px);
+  }
+  @include desktop {
+    width: 100%;
+    height: calc(100% - 20px);
+  }
 }
 
 .is-hidden {
@@ -324,17 +342,15 @@
   visibility: hidden;
 }
 
+.locations__backdrop 
 .modal-close-btn {
-  /* width: 30px;
-  height: 30px;
-  border: 1px solid #999999;
-  border-radius: 50%; */
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
   top: 10px;
   right: 10px;
+  padding: 10px;
   background-color: transparent;
 }
 
@@ -350,48 +366,66 @@
   height: 45px;
   font-size: 14px;
   line-height: 1.2;
-  color: #303030;
-  border: 1px solid #999999;
+  color: $transparent-text;
+  border: 1px solid transparent;
   border-radius: 3px;
   padding-left: 30px;
   outline: none;
-  margin-bottom: 20px;
+  @include tablet {
+    width: 100%;
+    // height: calc(100% - 20px);
+    font-size: 16px;
+  }
+  @include desktop {
+    width: 100%;
+    // height: calc(100% - 20px);
+  }
 }
 
-.locations__modal-icon {
-  position: absolute;
-  left: 5px;
-  top: 25%;
-  transform: translateY(-25%);
-}
+// .locations__modal-icon {
+//   position: absolute;
+//   left: 5px;
+//   top: 25%;
+//   transform: translateY(-25%);
+// }
 
-.locations__modal-input:focus {
-  border-color: blue;
-}
+// .locations__modal-input:focus {
+//   border-color: blue;
+// }
 
-.locations__modal-input:focus + .locations__modal-icon {
-  fill: blue;
-}
+// .locations__modal-input:focus + .locations__modal-icon {
+//   fill: blue;
+// }
 
-.locations__modal-input::placeholder {
-  color: purple;
-}
+// .locations__modal-input::placeholder {
+//   color: purple;
+// }
 
 .locations__modal-title {
-  font-size: 18px;
+  position: relative;
+  font-size: 16px;
   font-weight: 600;
-  color: #303030;
-  margin-top: 40px;
-  margin-bottom: 15px;
+  color: $main-text;
+  margin-top: 20px;
+  margin-bottom: 10px;
   text-align: center;
+  @include tablet {
+    font-size: 18px;
+  }
+  @include desktop {
+    font-size: 20px;
+  }
 }
 
-.modal-input__text,
+.locations__modal-input__text,
 .textarea-title {
-  font-size: 12px;
-  color: #303030;
+  font-size: 14px;
+  color: $main-text;
   display: inline-block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  @include tablet {
+    font-size: 16px;
+  }
 }
 
 .modal-comment {
@@ -399,27 +433,20 @@
   height: 80px;
   font-size: 14px;
   line-height: 1.2;
-  color: #303030;
+  color: $transparent-text;
   border: 1px solid #999999;
   border-radius: 3px;
+  border: 1px solid transparent;
   resize: none;
-  margin-bottom: 20px;
+  @include tablet {
+    font-size: 16px;
+    height: 150px;
+  }
 }
 
 .locations_modal-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
-}
-
-// .locations_map-button {
-//   text-align: center;
-//   margin-bottom: 10px;
-// }
-
-/* MAP */
-#map {
-  width: 100%;
-  height: 100%; 
+  margin-top: 40px;
 }
