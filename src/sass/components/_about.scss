@@ -224,7 +224,8 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   visibility: hidden;
 }
 .about__menu{
-    padding: 0;
+    padding-bottom: 10px;
+   
     position: absolute;
     top: 50%;
     left: 50%;
@@ -234,10 +235,11 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #fff5f6;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  overflow: hidden;
+  overflow: scroll;
   border-radius: 10px;
  @include desktop{
    padding: 80px;
+   overflow: hidden;
  }
 
 }
@@ -246,7 +248,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
  margin-right: auto;
   font-weight: 700;
 text-align: center;
-max-height: 50%;
+height: 50vh;
  @include desktop{
    margin-left: 0;
    margin-right: 0;
