@@ -72,67 +72,98 @@
         </svg>
       </button>
     </div>
-</div>
-<!-- MODAL SECTION -->
-<!-- MAP -->
-<div class="locations__backdrop is-hidden" map-modal>
-  <div class="locations__modal">
-    <div class="modal__map" id="map"></div>
-    <button type="button" map-modal-close class="modal-close-btn">
-      <svg class="close-icon"  width="11" height="11"><use href="./images/icons.svg#icon-close"></use></svg>
-    </button>
-    
   </div>
-</div>
-<!-- FORM -->
-<div class="locations__backdrop is-hidden" form-modal>
-  <div class="locations__modal">
-    <button type="button" form-modal-close class="modal-close-btn">
-      <svg class="close-icon"  width="11" height="11"><use href="./images/icons.svg#icon-close"></use></svg>
-    </button>
-    <p class="locations__modal-title">Field this form for callback</p>
-    <form class="modal__form">
-      <div class="locations__modal-field">
-      <label for="user-name">
-        <span class="locations__modal-input__text">Name</span></label>
-          <div class="locations__input-wrap">
-          <input type="text" class="locations__modal-input" name="user-name" id="user-name" placeholder=""/>
-          <!-- <svg class="locations__modal-icon" width="18" height="18"><use href="./images/icons.svg#icon-person-modal"></use></svg> -->
-          </div>
-      </div>
-      <div class="locations__modal-field">
-        <label for="user-phone">
-          <span class="locations__modal-input__text">Phone</span></label>
-            <div class="locations__input-wrap">
-            <input type="tel" class="locations__modal-input" name="user-phone" id="user-phone" placeholder=""/>
-            <!-- <svg class="locations__modal-icon" width="18" height="18"><use href="./images/icons.svg#icon-phone-modal"></use></svg> -->
-            </div>
-      </div>
-      <div class="locations__modal-field">
-          <label for="user-email">
-            <span class="locations__modal-input__text">E-mail</span></label>
-              <div class="locations__input-wrap">
-              <input type="email" class="locations__modal-input" name="user-email" id="user-email" placeholder=""/>
-              <!-- <svg class="locations__modal-icon" width="18" height="18"><use href="./images/icons.svg#icon-email-modal"></use></svg> -->
-              </div>
-      </div>
-      <div class="locations__modal-field">    
-        <label for="user-text">
-          <span class="textarea-title">Comment</span>
-          <textarea class="modal-comment" id="user-text" ></textarea>
-        </label>
-      </div>
-    </form>
-    <div class="locations_modal-button">
-      <button class="btn btn--regular btn--light" form-modal-close type="submit">
-        <span class="btn__name--light">Send request</span>
-        <svg class="icon__btn--light" width="12" height="10">
-          <use href="./images/icons.svg#icon-pointer"></use>
+  <!-- MODAL SECTION -->
+  <!-- MAP -->
+  <div class="locations__backdrop backdrop--transition is-hidden" map-modal>
+    <div class="locations__modal">
+      <div class="modal__map" id="map"></div>
+      <button type="button" map-modal-close class="modal-close-btn">
+        <svg class="close-icon" width="20" height="20">
+          <use href="./images/icons.svg#icon-close"></use>
         </svg>
       </button>
     </div>
   </div>
-</div>  
-
-
+  <!-- FORM -->
+  <div class="locations__backdrop backdrop--transition is-hidden" form-modal>
+    <div class="locations__modal">
+      <button type="button" form-modal-close class="modal-close-btn">
+        <svg class="close-icon" width="20" height="20">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <p class="locations__modal-title">Field this form for callback</p>
+      <form class="modal__form">
+        <div class="locations__modal-field">
+          <label for="user-name"> <span class="locations__modal-input__text">Name</span></label>
+          <div class="locations__input-wrap">
+            <input
+              type="text"
+              class="locations__modal-input"
+              name="user-name"
+              id="user-name"
+              placeholder=""
+            />
+            <!-- <svg class="locations__modal-icon" width="18" height="18"><use href="./images/icons.svg#icon-person-modal"></use></svg> -->
+          </div>
+        </div>
+        <div class="locations__modal-field">
+          <label for="user-phone"> <span class="locations__modal-input__text">Phone</span></label>
+          <div class="locations__input-wrap">
+            <input
+              type="tel"
+              class="locations__modal-input"
+              name="user-phone"
+              id="user-phone"
+              placeholder=""
+            />
+            <!-- <svg class="locations__modal-icon" width="18" height="18"><use href="./images/icons.svg#icon-phone-modal"></use></svg> -->
+          </div>
+        </div>
+        <div class="locations__modal-field">
+          <label for="user-email"> <span class="locations__modal-input__text">E-mail</span></label>
+          <div class="locations__input-wrap">
+            <input
+              type="email"
+              class="locations__modal-input"
+              name="user-email"
+              id="user-email"
+              placeholder=""
+            />
+            <!-- <svg class="locations__modal-icon" width="18" height="18"><use href="./images/icons.svg#icon-email-modal"></use></svg> -->
+          </div>
+        </div>
+        <div class="locations__modal-field">
+          <label for="user-text">
+            <span class="textarea-title">Comment</span>
+            <textarea class="modal-comment" id="user-text"></textarea>
+          </label>
+        </div>
+        <div class="location__check-wrapper">
+          <input
+            style="display: none"
+            type="checkbox"
+            id="location__privacy"
+            name="location__privacy"
+            class="location__privacy-check"
+          />
+          <label for="location__privacy" class="location__privacy-label">
+            <svg width="16" height="16">
+              <use href="./images/icons.svg#icon-checkbox" class="location__check-box"></use>
+              <use href="./images/icons.svg#icon-tick" class="location__check-icon"></use>
+            </svg>
+            <p class="location__privacy-text">
+              I accept <a href="" class="location__privacy-link">Terms and Conditions</a>
+            </p>
+          </label>
+        </div>
+        <div class="locations_modal-button">
+          <button class="btn btn--regular btn--light" form-modal-close type="submit">
+            <span class="btn__name--light">Send request</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 </section>

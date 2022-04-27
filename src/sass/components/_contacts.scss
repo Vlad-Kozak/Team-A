@@ -16,28 +16,15 @@
   margin-top: 0;
   padding-bottom: 0px;
   background-repeat: no-repeat;
-  background-image:
-  linear-gradient(
-      to bottom, 
-      $main-bgc 5%,
-      #FFF5F6 5%,
-      #FFF5F6 95%,    
-  );
+  background-image: linear-gradient(to bottom, $main-bgc 5%, #fff5f6 5%, #fff5f6 95%);
   padding-bottom: 113px;
   @include tablet {
     padding-bottom: 158px;
-    background-image: linear-gradient(
-    to bottom, 
-    $main-bgc 9%,
-    #FFF5F6 9%,
-    #FFF5F6 91%);
+    background-image: linear-gradient(to bottom, $main-bgc 9%, #fff5f6 9%, #fff5f6 91%);
   }
   @include desktop {
     background-image: url(./../images/sectionbg2-1x.png),
-    linear-gradient(to bottom, 
-    $main-bgc 11%,
-    #FFF5F6 11%,
-    #FFF5F6 89%);
+      linear-gradient(to bottom, $main-bgc 11%, #fff5f6 11%, #fff5f6 89%);
     background-repeat: no-repeat, no-repeat;
     padding-bottom: 165px;
     background-size: contain;
@@ -62,17 +49,17 @@
   padding: 43px 20px;
   background: $main-bgc;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0,0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 24px;
   @include tablet {
-    flex-basis: calc((100% - 30px)/ 3);
+    flex-basis: calc((100% - 30px) / 3);
     height: 544px;
     margin: 10px;
     padding: 50px 31px;
     margin-bottom: 0px;
   }
   @include desktop {
-    flex-basis: calc((100% - 45px)/ 3);
+    flex-basis: calc((100% - 45px) / 3);
     height: 572px;
     padding: 51px 44px;
     margin: 15px;
@@ -156,7 +143,7 @@
   letter-spacing: 4%;
   height: 145px;
   min-width: 179px;
-  border: 1px solid #E1E1E1;
+  border: 1px solid #e1e1e1;
   padding-top: 25px;
   padding-bottom: 25px;
   border-left: none;
@@ -262,16 +249,6 @@
   }
 }
 
-.btn__name--light {
-  margin-right: 15px;
-  @include tablet {
-    margin-right: 15px;
-  }
-  @include desktop {
-    margin-right: 17px;
-  }
-}
-
 .icon__btn--dark {
   stroke: $main-text;
 }
@@ -283,33 +260,31 @@
 /* MODAL SECTION */
 
 .locations__backdrop {
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   width: 100%;
   height: 100%;
-  background-color: rgba(48, 48, 48, 0.376);
+  background-color: rgba(0, 0, 0, 0.3);
   top: 0;
   left: 0;
   margin: auto;
-  transition: all 0.8s ease 0s;
 }
 
 .locations__modal {
-  position: fixed;
+  position: absolute;
   z-index: 3;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 320px; 
-  height: 600px ;
+  width: 90%;
+  max-width: 380px;
+  height: 600px;
   background-color: $hero-dark-bgc;
-  border-radius: 20px;
-  padding: 24px;
-  transition: all 0.8s ease 0s;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 45px 20px;
   @include tablet {
-    width: 425px; 
-    height: 650px;
-    max-height: 100%;
-    overflow: scroll;
+    max-width: 450px;
   }
   @include desktop {
     overflow: hidden;
@@ -319,10 +294,10 @@
 .modal__map {
   margin-top: 20px;
   margin-bottom: 20px;
-  vertical-align: top; 
-  border-radius: 5px; 
+  vertical-align: top;
+  border-radius: 5px;
   width: 100%;
-  height: calc(100% - 20px);
+  height: calc(100% - 40px);
 }
 
 .is-hidden {
@@ -331,38 +306,45 @@
   visibility: hidden;
 }
 
-.locations__backdrop 
-.modal-close-btn {
-  display: flex;
-  align-items: center;
+.locations__backdrop .modal-close-btn {
+  display: inline-flex;
   justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 10px;
+  top: 12px;
+  right: 12px;
+
+  width: 28px;
+  height: 28px;
+
   background-color: transparent;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $red-text;
+  }
+  transition: background-color $mobile-menu-appear-time $mobile-menu-appear-function;
 }
 
 .locations__modal-field {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .input-wrap {
   position: relative;
 }
 .locations__modal-input {
+  background-color: $main-bgc;
+  border: 1px solid $mobile-menu-list-elem-border-color;
+  border-radius: 6px;
   width: 100%;
-  height: 45px;
-  font-size: 14px;
-  line-height: 1.2;
-  color: $transparent-text;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  padding-left: 30px;
-  outline: none;
-  @include tablet {
-    font-size: 16px;
-  }
+  height: 30px;
+  max-height: 30px;
+
+  padding: 0 8px;
 }
 
 // .locations__modal-icon {
@@ -385,52 +367,81 @@
 // }
 
 .locations__modal-title {
-  position: relative;
-  font-size: 16px;
-  font-weight: 600;
-  color: $main-text;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  font-family: 'Titan One';
+  color: $red-text;
   text-align: center;
-  @include tablet {
-    font-size: 18px;
-  }
-  @include desktop {
-    font-size: 20px;
-  }
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  max-height: 21px;
+  margin-bottom: 32px;
 }
 
 .locations__modal-input__text,
 .textarea-title {
-  font-size: 14px;
-  color: $main-text;
+  font-size: 13px;
+  color: $red-text;
   display: inline-block;
-  margin-bottom: 10px;
-  @include tablet {
-    font-size: 16px;
-  }
+  margin-bottom: 4px;
 }
 
 .modal-comment {
+  background-color: $main-bgc;
+  border: 1px solid $mobile-menu-list-elem-border-color;
+  border-radius: 4px;
   width: 100%;
-  height: 100px;
-  font-size: 14px;
-  line-height: 1.2;
-  padding-top: 15px;
-  padding-left: 30px;
-  color: $transparent-text;
-  border-radius: 3px;
-  border: none;
+  max-width: 100%;
+  height: 120px;
+  max-height: 120px;
+  padding: 2px 8px;
   resize: none;
-  @include tablet {
-    font-size: 16px;
-    height: 150px;
-  }
 }
 
 .locations_modal-button {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-top: 40px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.location__check-wrapper {
+  margin-top: 20px;
+}
+
+.location__privacy-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.location__privacy-label > svg {
+  .location__privacy-check:checked + & {
+    background-color: $red-text;
+    border-radius: 2px;
+  }
+}
+
+.location__check-box {
+  .location__privacy-check:checked + .location__privacy-label > svg > & {
+    fill: transparent;
+  }
+}
+
+.location__check-icon {
+  fill: transparent;
+
+  .location__privacy-check:checked + .location__privacy-label > svg > & {
+    fill: $main-text;
+  }
+}
+
+.location__privacy-text {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.location__privacy-link {
+  text-decoration: underline;
+  color: #002efc;
+  font-size: 12px;
 }
