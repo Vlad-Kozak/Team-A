@@ -204,16 +204,16 @@
   height: 10px;
 }
 
+// !!!!!!!!!!modal!!!!!!!!!!!!!!!
 
-.about__backdrop{
-  
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top:0;
-    background-color: rgba(0, 0, 0, 0.4);
-    transform: scale(100%);
-    transition-property: transform skale;
+.about__backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: scale(100%);
+  transition-property: transform skale;
   z-index: 2;
 }
 .is-hidden {
@@ -221,148 +221,134 @@
   pointer-events: none;
   visibility: hidden;
 }
-.about__menu{
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 60vw;
-    height: 80vh;
-    background-color: #fff5f6;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+.about__menu {
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: 80vh;
+  background-color: #fff5f6;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   overflow: hidden;
 
- @include desktop{
-   padding: 80px;
- }
-
-}
-.about__menu-text{
-   margin-left: auto;
- margin-right: auto;
-  font-weight: 700;
-text-align: center;
-max-height: 50%;
- @include desktop{
-   margin-left: 0;
-   margin-right: 0;
- }
-}
-.about__menu-btn{
-margin: 40px auto;
   @include desktop {
-    position: absolute;
-  top: 0px;
-  right: 20px;
-  transform: translate(-50%);
-  
+    padding: 80px;
   }
 }
- 
-.about-backdrop__list{
- position: relative;
+.about__menu-text {
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  text-align: center;
+  max-height: 50%;
+  @include desktop {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.about__menu-btn {
+  margin: 40px auto;
+  @include desktop {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    transform: translate(-50%);
+  }
+}
+
+.about-backdrop__list {
+  position: relative;
   display: flex;
   height: 100%;
   align-items: center;
 
   @include tablet {
-  
+    height: 100%;
+    align-items: center;
+    background-size: 60vw;
+  }
+}
+
+.about-backdrop__item {
+  display: none;
   height: 100%;
-  align-items: center;
-  background-size: 60vw;
-  }
-  
-}
+  margin-bottom: 60px;
 
-.about-backdrop__item{
-display: none;
- height: 100%;
- margin-bottom: 60px;
-
-@include desktop{
-  display: block;
- width: calc(100%/3);
- 
- cursor: pointer;
-  &:hover{
-    
-    .about-overlay__name{
-   color: #d41443;
-
- }
-  .about-overlay{
-  opacity: 1;
- width: 100%;
- height: 80%;
- transform: translate(50%, -150%);
- pointer-events: none;
-    }
-  
-  }
-}
-
-}
-.about-overlay{
-  
-  
   @include desktop {
-     position: absolute;
- left: 0;
- height: 100%;
- width: 100%;
-padding: 63px 24px;
-line-height: 1.56;
-letter-spacing: 0.03em;
-opacity: 0;
-  }
+    display: block;
+    width: calc(100% / 3);
 
+    cursor: pointer;
+    &:hover {
+      .about-overlay__name {
+        color: #d41443;
+      }
+      .about-overlay {
+        opacity: 1;
+        width: 100%;
+        height: 80%;
+        transform: translate(50%, -150%);
+        pointer-events: none;
+      }
+    }
+  }
+}
+.about-overlay {
+  @include desktop {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 63px 24px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    opacity: 0;
+  }
 }
 
-.about-overlay__name{
+.about-overlay__name {
   text-align: center;
   color: #ffa5ba;
   font-size: 35px;
- margin-top: 95%;
+  margin-top: 95%;
 }
-.about-overlay__text{
+.about-overlay__text {
   margin-top: 40px;
   width: 50%;
   font-weight: 900;
   font-size: 20px;
   text-align: center;
   line-height: 1.56;
-letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
 }
 
-.cow1{
-width: 100%;
-height: 100%;
- background-size: contain;
+.cow1 {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
   background-position: left;
   background-repeat: no-repeat;
- background-image: url(/images/cow1.png);
+  background-image: url(/images/cow1.png);
 }
-.cow2{
-@extend .cow1;
+.cow2 {
+  @extend .cow1;
   background-image: url(/images/milkqual.png);
-
 }
-.cow3{
- @extend .cow1;
- background-image: url(.././images/traditions.png);
+.cow3 {
+  @extend .cow1;
+  background-image: url(.././images/traditions.png);
 }
 
-
-
-
-.start{
+.start {
   color: yellowgreen;
 }
-.then{
+.then {
   color: gray;
 }
-.result{
+.result {
   color: steelblue;
 }
