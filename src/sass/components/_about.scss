@@ -230,21 +230,22 @@
     width: 60vw;
     height: 80vh;
     // background-image: url(.././images/cowdeskx2.png);
-    // background-position: left 100% top 20px;
+    // background-position: right -100% top 200%;
     // background-repeat: no-repeat;
     background-color: #fff5f6;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  overflow: hidden;
 }
 .about__menu-text{
-
-text-align: right;
+  font-weight: 700;
+text-align: center;
 max-height: 50%;
 
 }
 .about__menu-btn{
   position: absolute;
-  top: 10px;
+  top: 0px;
   right: 20px;
   transform: translate(-50%);
   z-index: 2;
@@ -266,24 +267,31 @@ max-height: 50%;
   
 }
 .about-overlay__text{
-max-width: 100%;
-margin-top: 40px;
+  margin-top: 40px;
+  width: 50%;
+  font-weight: 900;
+  font-size: 20px;
   text-align: center;
+  line-height: 1.56;
+letter-spacing: 0.03em;
 }
+
 .about-backdrop__item{
-cursor: pointer;
+  margin-bottom: 60px;
  width: calc(100%/3);
   height: 100%;
- 
+ cursor: pointer;
   &:hover{
+   
     .about-overlay__name{
    color: #d41443;
+
  }
   .about-overlay{
   opacity: 1;
  width: 100%;
  height: 80%;
- transform: translate(26%, -150%);
+ transform: translate(50%, -150%);
  pointer-events: none;
     }
   
@@ -293,46 +301,28 @@ cursor: pointer;
 width: 100%;
 height: 100%;
  background-size: contain;
-  background-position: center;
- background-image: url(/images/cowfree.jpg);
- background-repeat: no-repeat;
-
- 
+  background-position: left;
+  background-repeat: no-repeat;
+ background-image: url(/images/cow1.png);
 }
 .cow2{
- width: 100%;
-height: 100%;
-  background-size: contain;
-  background-position: center;
+@extend .cow1;
   background-image: url(/images/milkqual.png);
- background-repeat: no-repeat;
+
 }
 .cow3{
-  width: 100%;
-height: 100%;
-   background-size: contain;
-  background-position: center;
-
+ @extend .cow1;
  background-image: url(.././images/traditions.png);
- background-repeat: no-repeat;
 }
 
 .about-overlay{
-    width: 100%;
-  height: 100%;
-//   background-size: cover;
-//   background-position: center;
-//  background-image: url(/images/icecow.png);
-//  background-repeat: no-repeat;
-      position:absolute;
-      pointer-events: none;
-
+  position: absolute;
  left: 0;
  height: 100%;
  width: 100%;
 padding: 63px 24px;
-font-weight: 400;
-font-size: 18px;
+// font-weight: 400;
+// font-size: 18px;
 line-height: 1.56;
 letter-spacing: 0.03em;
 
