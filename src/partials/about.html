@@ -28,7 +28,7 @@
           maximus. Cras massa nibh, tincidunt.<br>                 </br>     
           Aliquam erat volutpat. Aenean accumsan.
         </p>
-        <button class="about__btn">
+        <button class="about__btn"data-modal-open>
           <span>Read more</span>
           <svg class="btn__icon" width="5px" height="8px">
             <use href="../images/icons.svg#icon-pointer"></use>
@@ -38,3 +38,21 @@
     </div>
   </div>
 </section>
+<div class="about__backdrop is-hidden" data-modal>
+<div class="about__menu">
+  <button class="about__btn about__menu-btn" data-modal-close>
+          <span>To the cow</span>
+          <svg class="btn__icon" width="5px" height="8px">
+            <use href="../images/icons.svg#icon-pointer"></use>
+          </svg>
+        </button>
+        <p class="about__main-text about__menu-text">
+          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
+
+Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.
+
+Aliquam erat volutpat. Aenean accumsan.
+        </p>
+</div>
+</div>
+<script src="./js/about.js"></script>
