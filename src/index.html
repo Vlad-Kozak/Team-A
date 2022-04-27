@@ -39,6 +39,14 @@
     <include src="./partials/contacts.html"></include>
     <include src="./partials/footer.html"></include>
 
+    <!-- Кнопка прокрутки страницы вверх -->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <svg class="btn-up-icon" width="24" height="24">
+        <use src="./images/btn-up.svg"></use>
+      </svg>
+    </button>
+
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
 
     <script src="./index.js"></script>
@@ -56,5 +64,6 @@
       async
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEdEngwjNtftv-NIfUqyZjHKlYUUCPyk8&callback=initMap"
     ></script>
+    <script src="./js/btn-up.js"></script>
   </body>
 </html>
