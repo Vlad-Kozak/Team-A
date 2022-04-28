@@ -121,11 +121,13 @@
         background-position: center;
         background-size: cover;
         background-image: url(../images/home-pic1-mob.png);
+        background-image: -webkit-image-set(url(../images/home-pic1-mob.webp) 1x);
 
         @media screen and (min-device-pixel-ratio: 2),
           (min-resolution: 192dpi),
           (min-resolution: 2dppx) {
           background-image: url(../images/home-pic1-mob-2x.png);
+          background-image: -webkit-image-set(url(../images/home-pic1-mob-2x.webp) 2x);
         }
 
         @include tablet {
@@ -133,10 +135,13 @@
           height: 224px;
 
           background-image: url(../images/home-pic1-tablet.png);
+          background-image: -webkit-image-set(url(../images/home-pic1-tablet.webp) 1x);
+
           @media screen and (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
             background-image: url(../images/home-pic1-tablet-2x.png);
+            background-image: -webkit-image-set(url(../images/home-pic1-tablet-2x.webp) 2x);
           }
         }
 
@@ -146,10 +151,13 @@
           top: -10%;
 
           background-image: url(../images/home-pic1.png);
+          background-image: -webkit-image-set(url(../images/home-pic1.webp) 1x);
+
           @media screen and (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
             background-image: url(../images/home-pic1-2x.png);
+            background-image: -webkit-image-set(url(../images/home-pic1-2x.webp) 2x);
           }
         }
       }
@@ -170,11 +178,13 @@
         background-position: center;
         background-size: cover;
         background-image: url(../images/home-pic2-mob.png);
+        background-image: -webkit-image-set(url(../images/home-pic2-mob.webp) 1x);
 
         @media screen and (min-device-pixel-ratio: 2),
           (min-resolution: 192dpi),
           (min-resolution: 2dppx) {
           background-image: url(../images/home-pic2-mob-2x.png);
+          background-image: -webkit-image-set(url(../images/home-pic2-mob-2x.webp) 2x);
         }
 
         @include tablet {
@@ -182,10 +192,12 @@
           height: 224px;
 
           background-image: url(../images/home-pic2-tablet.png);
+          background-image: -webkit-image-set(url(../images/home-pic2-tablet.webp) 1x);
           @media screen and (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
             background-image: url(../images/home-pic2-tablet-2x.png);
+            background-image: -webkit-image-set(url(../images/home-pic2-tablet-2x.webp) 2x);
           }
         }
 
@@ -195,10 +207,12 @@
           top: -10%;
 
           background-image: url(../images/home-pic2.png);
+          background-image: -webkit-image-set(url(../images/home-pic2.webp) 1x);
           @media screen and (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
             background-image: url(../images/home-pic2-2x.png);
+            background-image: -webkit-image-set(url(../images/home-pic2-2x.webp) 2x);
           }
         }
       }
@@ -219,11 +233,13 @@
         background-position: center;
         background-size: cover;
         background-image: url(../images/home-pic3-mob.png);
+        background-image: -webkit-image-set(url(../images/home-pic3-mob.webp) 1x);
 
         @media screen and (min-device-pixel-ratio: 2),
           (min-resolution: 192dpi),
           (min-resolution: 2dppx) {
           background-image: url(../images/home-pic3-mob-2x.png);
+          background-image: -webkit-image-set(url(../images/home-pic3-mob-2x.webp) 2x);
         }
 
         @include tablet {
@@ -231,10 +247,12 @@
           height: 224px;
 
           background-image: url(../images/home-pic3-tablet.png);
+          background-image: -webkit-image-set(url(../images/home-pic3-tablet.webp) 1x);
           @media screen and (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
             background-image: url(../images/home-pic3-tablet-2x.png);
+            background-image: -webkit-image-set(url(../images/home-pic3-tablet-2x.webp) 2x);
           }
         }
 
@@ -244,10 +262,12 @@
           top: -10%;
 
           background-image: url(../images/home-pic3.png);
+          background-image: -webkit-image-set(url(../images/home-pic3.webp) 1x);
           @media screen and (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
             background-image: url(../images/home-pic3-2x.png);
+            background-image: -webkit-image-set(url(../images/home-pic3-2x.webp) 2x);
           }
         }
       }

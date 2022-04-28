@@ -3,7 +3,8 @@
   background-color: #fff5f6;
 
   @include mobile {
-    background-image: url(/images/milkdesk.png);
+    background-image: url(/images/mobmilk.png);
+    background-image: -webkit-image-set(url(/images/mobmilk.webp));
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: left 0px bottom 60px;
@@ -17,6 +18,7 @@
     padding-top: 125px;
 
     background-image: url(/images/milkdesk.png);
+    background-image: -webkit-image-set(url(/images/milkdesk.webp));
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: left 0px bottom 0px;
