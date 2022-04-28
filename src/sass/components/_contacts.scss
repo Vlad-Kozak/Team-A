@@ -76,11 +76,11 @@
     margin: 15px;
   }
   &:hover,
-    &:focus {
-      transform: scale(1.025);
-      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1), height 250ms cubic-bezier(0.4, 0, 0.2, 1);    
-    }
+  &:focus {
+    transform: scale(1.025);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1), height 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 // .locations__item-wrapper {
@@ -148,7 +148,7 @@
   margin-bottom: 25px;
   font-weight: 500;
   font-size: 12px;
-  line-height: 1.15;
+  line-height: 1.5;
   color: $transparent-text;
   @include tablet {
     font-size: 14px;
@@ -209,7 +209,7 @@
   display: block;
   font-weight: 500;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 1.83;
   color: $transparent-text;
   @include tablet {
     font-size: 14px;

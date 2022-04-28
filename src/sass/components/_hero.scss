@@ -139,7 +139,7 @@ $uncolored-btn-bgc: #ecebeb;
   font-style: normal;
   font-weight: 400;
   font-size: 26px;
-  line-height: 1.25;
+  line-height: 1.15;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $main-text;
@@ -155,7 +155,7 @@ $uncolored-btn-bgc: #ecebeb;
 
   @include tablet {
     max-width: 169px;
-    font-size: 25px;
+    font-size: 22px;
     line-height: 1.13636;
     margin-bottom: 20px;
 
