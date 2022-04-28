@@ -4,15 +4,18 @@ $colored-btn-bgc: #c7133e;
 $uncolored-btn-bgc: #ecebeb;
 
 .tada {
-  -webkit-animation-name: tada;
-  animation-name: tada;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+  @include desktop {
+    -webkit-animation-name: tada;
+    animation-name: tada;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
 }
+
 @-webkit-keyframes tada {
   0% {
     -webkit-transform: scale3d(1, 1, 1);
@@ -83,11 +86,13 @@ $uncolored-btn-bgc: #ecebeb;
 }
 
 .rotate-scale-down {
-  animation: rotate-scale-down 0.65s linear both;
+  @include desktop {
+    animation: rotate-scale-down 0.65s linear both;
+  }
 }
 
 .fadeInLeft {
-  @include tablet {
+  @include desktop {
     -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
     -webkit-animation-duration: 1s;
