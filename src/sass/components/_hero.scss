@@ -3,6 +3,96 @@ $text-content-z: 1;
 $colored-btn-bgc: #c7133e;
 $uncolored-btn-bgc: #ecebeb;
 
+.fadeInRight {
+  @include tablet {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 0.75s;
+    animation-delay: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+}
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes rotate-scale-down {
+  0% {
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(1.5) rotateZ(180deg);
+  }
+  100% {
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+
+.rotate-scale-down {
+  animation: rotate-scale-down 0.65s linear both;
+}
+
+.fadeInLeft {
+  @include tablet {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+}
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
 .hero {
   background-color: $hero-light-bgc;
 }
