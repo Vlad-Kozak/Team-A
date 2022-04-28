@@ -11,6 +11,8 @@ function scrollFunction() {
   }
 }
 
+document.querySelector('#myBtn').addEventListener('click', topFunction);
+
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0; // For Safari

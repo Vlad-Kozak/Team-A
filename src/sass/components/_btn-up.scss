@@ -1,20 +1,30 @@
+.btn-up {
+  visibility: hidden;
+
+  @include tablet {
+    visibility: visible;
+  }
+}
+
 #myBtn {
   display: none;
   position: fixed;
-  bottom: 150px;
+  bottom: 50px;
   right: 50px;
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #323232;
+  background-color: transparent;
   cursor: pointer;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-#myBtn:hover {
-  background-color: #555;
+  border-radius: 50%;
 }
 
 .btn-up-icon {
+  fill: rgba($color: #ffa5ba, $alpha: 0.7);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  #myBtn:hover & {
+    fill: #ffa5ba;
+  }
 }
