@@ -37,6 +37,10 @@
 
   position: relative;
 
+  @include mobile {
+    width: 100%;
+  }
+
   @include tablet {
     width: 620px;
     margin-bottom: 10px;
@@ -84,6 +88,10 @@
     #e1e1e1 30px
   );
 
+  @include mobile {
+    width: calc(100% - 100px);
+  }
+
   @include tablet {
     width: 524px;
   }
@@ -113,6 +121,10 @@
 
   position: relative;
   z-index: 2;
+
+  @include mobile {
+    width: calc(100% - 23px);
+  }
 
   @include tablet {
     width: 460px;

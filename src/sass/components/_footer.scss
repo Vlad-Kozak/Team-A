@@ -60,9 +60,15 @@
   color: $red-text;
 
   @include tablet {
-    font-size: 58px;
+    width: 240px;
+    font-size: 48px;
     line-height: 1.14;
     letter-spacing: 0.06em;
+  }
+
+  @include desktop {
+    width: 500px;
+    font-size: 58px;
   }
 }
 

@@ -1,7 +1,7 @@
 (() => {
   const menuBtnRef = document.querySelector('[data-menu-button]');
   const mobileMenuRef = document.querySelector('[data-menu]');
-  const backdropRef = document.querySelector('[backdrop]');
+  const backdropRef = document.querySelector('[data-backdrop]');
   menuBtnRef.addEventListener('click', () => {
     const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
     menuBtnRef.classList.add('is-open');
@@ -19,7 +19,7 @@
     backdropRef.classList.add('is-hidden');
     document.body.classList.remove('modal-open');
   });
-  const menuLinkList = document.querySelectorAll('[header-link]');
+  const menuLinkList = document.querySelectorAll('[data-header-link]');
   menuLinkList.forEach(el => {
     el.addEventListener('click', () => {
       menuBtnRef.classList.remove('is-open');
