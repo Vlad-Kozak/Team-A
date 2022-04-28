@@ -59,13 +59,13 @@
       </li>
     </ul>
     <div class="location__buttoms">
-      <button class="btn btn--alt btn--dark" type="button" map-modal-open>
+      <button class="btn btn--alt btn--dark" type="button" data-map-modal-open>
         <span class="btn__name--dark">Our Locations</span>
         <svg class="icon__btn--dark" width="12" height="10">
           <use href="./images/icons.svg#icon-pointer"></use>
         </svg>
       </button>
-      <button class="btn btn--regular btn--light" type="button" form-modal-open>
+      <button class="btn btn--regular btn--light" type="button" data-form-modal-open>
         <span class="btn__name--light">Franchise</span>
         <svg class="icon__btn--light" width="12" height="10">
           <use href="./images/icons.svg#icon-pointer"></use>
@@ -75,10 +75,10 @@
   </div>
   <!-- MODAL SECTION -->
   <!-- MAP -->
-  <div class="locations__backdrop backdrop--transition is-hidden" map-modal>
+  <div class="locations__backdrop backdrop--transition is-hidden" data-map-modal>
     <div class="locations__modal">
       <div class="modal__map" id="map"></div>
-      <button type="button" map-modal-close class="modal-close-btn">
+      <button type="button" data-map-modal-close class="modal-close-btn">
         <svg class="close-icon" width="20" height="20">
           <use href="./images/icons.svg#icon-close"></use>
         </svg>
@@ -86,9 +86,9 @@
     </div>
   </div>
   <!-- FORM -->
-  <div class="locations__backdrop backdrop--transition is-hidden" form-modal>
+  <div class="locations__backdrop backdrop--transition is-hidden" data-form-modal>
     <div class="locations__modal">
-      <button type="button" form-modal-close class="modal-close-btn">
+      <button type="button" data-form-modal-close class="modal-close-btn">
         <svg class="close-icon" width="20" height="20">
           <use href="./images/icons.svg#icon-close"></use>
         </svg>
@@ -153,9 +153,9 @@
               <use href="./images/icons.svg#icon-checkbox" class="location__check-box"></use>
               <use href="./images/icons.svg#icon-tick" class="location__check-icon"></use>
             </svg>
-            <p class="location__privacy-text">
+            <span class="location__privacy-text">
               I accept <a href="" class="location__privacy-link">Terms and Conditions</a>
-            </p>
+            </span>
           </label>
         </div>
         <div class="locations_modal-button">
