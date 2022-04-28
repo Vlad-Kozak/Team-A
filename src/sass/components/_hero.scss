@@ -5,15 +5,19 @@ $uncolored-btn-bgc: #ecebeb;
 
 .hero {
   background-color: $hero-light-bgc;
+
+  @include mobile {
+    overflow: hidden;
+  }
 }
 
 .hero__container {
   position: relative;
   min-height: 502px;
 
-  @include mobile {
-    overflow: hidden;
-  }
+  // @include mobile {
+  //   overflow: hidden;
+  // }
 
   @include tablet {
     min-height: 399px;
