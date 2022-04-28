@@ -86,14 +86,22 @@
 
     &.is-open {
       height: 630px;
+
+      @media screen and (max-width: 399px) {
+        height: 600px;
+      }
+
+      @media screen and (min-width: 400px) and (max-width: 767px) {
+        height: 570px;
+      }
+
+      // @media screen and (min-width: 360px) and (max-width: 767px) {
+      //   height: 570px;
+      // }
     }
 
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 767px) {
       width: 100%;
-    }
-
-    @media screen and (min-width: 480px) and (max-width: 767px) {
-      width: 280px;
     }
 
     @include tablet {
@@ -363,7 +371,7 @@
     left: 50%;
     bottom: 5px;
 
-    margin-bottom: 41px;
+    margin-bottom: 40px;
     cursor: pointer;
     width: 40px;
     height: 40px;
@@ -382,8 +390,8 @@
       transform: translate(-50%) scale(1.1);
     }
 
-    @include tablet {
-      margin-bottom: 40px;
+    @media screen and (min-width: 420px) and (max-width: 767px) {
+      margin-bottom: 70px;
     }
 
     @include desktop {
@@ -416,15 +424,11 @@
   max-width: calc(100% - 80px);
   opacity: 0;
 
-  @media screen and (min-width: 360px) and (max-width: 399px) {
+  @media screen and (min-width: 360px) and (max-width: 459px) {
     margin-top: -15px;
   }
-  @media screen and (min-width: 400px) and (max-width: 439px) {
+  @media screen and (min-width: 460px) and (max-width: 767px) {
     margin-top: -30px;
-  }
-
-  @media screen and (min-width: 440px) and (max-width: 479px) {
-    margin-top: -45px;
   }
 
   @include tablet {
