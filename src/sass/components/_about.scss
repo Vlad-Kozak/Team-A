@@ -1,4 +1,6 @@
-
+// *{
+//   outline: 1px solid teal;
+// }
 
 .about {
   padding-top: 125px;
@@ -11,7 +13,7 @@
     background-position: left 0px bottom 60px;
   }
 
-  @include tablet {
+  @include tablet { 
     padding-top: 130px;
   }
 
@@ -92,6 +94,7 @@
   margin-top: 46px;
 
   @include tablet {
+    
     margin-left: 17px;
     margin-top: 100px;
   }
@@ -133,9 +136,10 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   line-height: 1.62;
   color: #000000;
   margin-bottom: 25px;
+  
 
   @include mobile {
-    width: 220px;
+
     margin-left: auto;
     margin-right: auto;
   }
@@ -144,6 +148,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 14px;
     line-height: 1.76;
     width: 340px;
+    text-align: left;
   }
 
   @include desktop {
@@ -161,11 +166,13 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   line-height: 1.62;
   color: #907e82;
   position: relative;
+  
 
   @include mobile {
-    width: 220px;
+   
     margin-left: auto;
     margin-right: auto;
+    text-align: left;
   }
 
   @include tablet {
@@ -187,6 +194,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: auto;
   margin-top: 17px;
   margin-right: 44px;
+margin-right: auto;
   width: 176px;
   height: 44px;
 
@@ -225,110 +233,128 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
   visibility: hidden;
 }
+
 .about__menu{
-    padding-bottom: 10px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 60vw;
     height: 80vh;
-    background-color: #fff5f6;
+    padding: 20px;
+  background-color: #ffa5ba;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
   overflow: scroll;
   border-radius: 10px;
+  
+  @include tablet{
+    max-width: 420px;
+  }
+
  @include desktop{
-   padding: 80px;
+   max-width: 100%;
+   padding: 20px;
    overflow: hidden;
+     background-color: #fff5f6;
+
  }
 
 }
-.about__menu-text-block{
-   margin-left: auto;
- margin-right: auto;
 
+.about__menu-btn{
+margin: 40px auto;
 
-  @include desktop{
-   margin-left: 0;
-   margin-right: auto;
-  
- }
+  @include desktop {
+    background-color: #ffa5ba;
+    position: absolute;
+    margin: 20px 0px;
+  top: 20px;
+  right: 20px;
+  transform: translate(-20%);
+  }
 }
+
 .about__menu-text{
-  
-   margin-left: auto;
- margin-right: auto;
-  font-weight: 700;
+  width: 100%;
+  padding: 10px;
+  font-weight: 500;
   text-align: center;
+   font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+
+@media screen and (max-width:767px) {
+  max-width: 480px;
+}
+
+  @include tablet{
+
+  }
+
   @include desktop{
     visibility: hidden;
   }
 }
-.about__menu-btn{
-  
-margin: 40px auto;
-  @include desktop {
-    background-color: #ffa5ba;
-    position: absolute;
-  top: 0px;
-  right: 20px;
-  transform: translate(-50%);
-  
-  }
-}
+
+
  
-.about-backdrop__list{
-margin-top: 25px;
+.about-menu__list{
   display: none;
-  height: 100%;
-  align-items: center;
+
 
   @include desktop{
   display: flex;
-  align-items: flex-start;
-  
+  align-items: center;
+  justify-content: center;
 
+  height: 100%;
+  
   }
+}
+
+.about-menu__name{
+  display: inline-block;
+  min-height: 25px;
+  margin: 20px;
+// max-width: 50%;
+  text-align: center;
+  color: #ffa5ba;
+  font-size: 35px;
+.about-menu__item:hover &{
+    font-family: 'Titan One', cursive;
+}
   
 }
 
-.about-backdrop__item{
-  position: relative;
-display: none;
- height: 70%;
- margin-bottom: 60px;
- 
+
+
+.about-menu__item{
+  display: none;
 
 @include desktop{
-  display: block;
- width: calc(100%/3);
- 
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-top: auto;
+ max-height: 100%;
+ width: calc(100% / 3 - 10px);
 
-  &:hover, &:focus{
-    
-    .about__menu-text{
-      visibility: visible;
-    }
-    .about-overlay__name{
-   color: #d41443;
-
+ &:not(:last-child){
+   margin-right: 10px;
  }
-  .about-overlay{
  
- width: 100%;
- height: 80%;
+  &:hover, &:focus{
+    .about-menu__name{
+   color: #d41443;
+ }
 
- pointer-events: none;
-    }
-    
-.start{
-  color: yellowgreen;
+.text1{
+  color: goldenrod;
 }
-.then{
+.text2{
   color: firebrick;
 }
-.result{
+.text3{
   color: steelblue;
 }
   
@@ -336,58 +362,35 @@ display: none;
 }
 
 }
+.reverse{
+  margin-top: 0;
+  margin-bottom: auto;
+}
 
-.about-overlay{
-  display: none;
 
-  @include desktop {
-     position: absolute;
-     display: block;
- right: 0;
- bottom: 0;
- height: 100%;
- width: 100%;
-padding: 63px 24px;
-line-height: 1.56;
-letter-spacing: 0.03em;
-
+.overdiv{
+  display: flex;
+  flex-direction: column-reverse;
+  margin: auto;
 
   }
 
-}
-
-.about-overlay__name{
-  text-align: center;
-  color: #ffa5ba;
-  font-size: 35px;
-//  margin-top: 95%;
-}
 .about-overlay__text{
-  margin-top: 10px;
-  width: 100%;
-  font-weight: 900;
-  font-size: 20px;
+  padding: 10px;
+margin-top: auto;
+margin-bottom: auto;
+  font-weight: 500;
+  font-size: 17px;
   text-align: center;
   line-height: 1.56;
 letter-spacing: 0.03em;
+
+.about-menu__item:hover &{
+  font-size: 19px;
+ font-weight: 700;
+}
 }
 
-.cow1{
+.overimg{
 width: 100%;
-height: 100%;
- background-size: contain;
-  background-position: left;
-  background-repeat: no-repeat;
- background-image: url(/images/cow1.png);
 }
-.cow2{
-@extend .cow1;
-  background-image: url(/images/milkqual.png);
-
-}
-.cow3{
- @extend .cow1;
- background-image: url(.././images/traditions.png);
-}
-
-
